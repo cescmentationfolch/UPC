@@ -1,0 +1,55 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+
+\title{C\`alcul Num\`eric}
+\author{Victor Mart\'in, Eric Valls, Dean Zhu}
+\date{October 2017}
+
+\begin{document}
+\maketitle
+\section*{Exercici 1}
+\subsection*{Plantejament del Problema}
+\quad Volem determinar l'angle amb que s'ha de disparar un projectil perquè, fixada la celeritat inicial, arriba a una dist\`ancia concreta. Aix\`o ens porta a plantejar un sistema de EDOs. \\
+
+Tenim la funci\'o \emph{f} a \emph{distancia.m}
+que, donat un angle i una velocitat inicial del tir (que està fixada al problema), resol el sistema i retorna la dist\`ancia horitzontal a la que arriba el projectil. \\
+
+Per trobar l'angle de llan\c{c}ament correcte volem trobar un angle ${\theta}$ tal que $f({\theta})$ sigui la dist\`ancia desitjada, en el nostre cas 500. Per resoldre aquest problema definim una funci\'o auxiliar $g(x) = f(x) - 500,$ on veiem que ${\theta}$ \'es soluci\'o de $f({\theta})$ = 500 si i només si  ${\theta}$  és un zero de la funci\'o g.\\
+
+Pels punts proposats:\\
+$\hspace*{1cm} f(0.25) = 451.263 m$\\
+$\hspace*{1cm} f(0.5) = 626.0806 m$\\
+$\hspace*{1cm} f(0.75) = 653.4704 m$\\
+$\hspace*{1cm} f(1) = 564.6122 m$
+\subsection*{Plantejament de la soluci\'o}
+\quad Considerem nom\'es les solucions amb $\theta  \in [0,\pi/2]$ \'es a dir, un angle del primer quadrant, doncs cap altre angle de tir t\'e sentit en aquest context.\\
+
+Veient els resultats anteriors i donat que \emph{f} \'es una funci\'o continua ja que f es derivable, podem afirmar pel teorema de Bolzano-Weierstrass que en el interval $[0.25,0.5]$ existeix com a m\'inim una soluci\'o.
+A m\'es sabem que un tir de angle $\pi/2$ arribara a una dist\`ancia propera al 0, llavors afirmarem que existeix una altra soluci\'o en el interval $[1,\pi/2]$. A m\'es si considerem que el tir parab\'olic es una funci\'o de segon grau, sembla raonable suposar que nom\'es existeixen dues solucions.
+
+Per recolzar aquesta hipotesis, avaluarem la funció en l'interval $[0,\pi/2]$ per tenir una idea de la gr\`afica de la funci\'o. 
+%imatge de f en l'interval
+\\
+
+Per solucionar aquest problema tenim diversos m\`etodes: Bissecci\'o, Newton, secant i m\`etodes h\'ibrids.
+
+\subsection*{M\'etode de Bissecci\'o}
+\quad Aquest m\'etode t\'e una clara avantatge, sabem que convergir\`a. A més a m\'es és més f\`acil de programar que un m\`etode h\'ibrid. No obstant, la seva convergència és linial, essent massa lenta en molts casos.
+
+\subsection*{M\'etode de Newton}
+\quad Comparat amb el m\`etode de bissecci\'o, el mètode de Newton convergir\`a bastant m\'es r\`apid en general. A més a més, donada la forma de la funci\'o \emph{g}, sembla ser bastant bona com per qu\`e despr\`es de cada iteraci\'o ens apropem a la soluci\'o desitjada. Per\'o aquest m\`etode es impensable per una senzilla ra\'o, no sabem calcular la derivada de \emph{g}.
+
+\subsection*{M\'etode de la Secant}
+\quad Donat el problema del m\`etode de Newton la secant sembla ser la soluci\'o m\'es raonable per aquest problema, donat la forma de la gr\`afica sembla que convergir\`a a les arrels i de forma m\'es r\`apida que el m\'etode de la bissecci\'o i a m\'es ens estalviem el problema de les derivades. I efectivament despr\`es de provarho veiem que convergeix de sense problemes. 
+\subsubsection*{Aproximaci\'o Inicial}
+\quad Per triar l'aproximaci\'o inicial nom\'es calia veure com es comportava la funci\'o, llavors si prens 2 angles $\alpha < \beta$ tal que $ g(\alpha) > g(\beta) $ la funci\'o convergir\'a al segon punt cr\'itic, en canvi si prenies els dos angles tal que $ g(\alpha) < g(\beta) $ convergir\`a en el primer punt cr\'itic. Per tant per que el m\`etode \'es comport\'es b\'e haviem d\'evitar dos angles tal que arribarien a la mateixa dist\`ancia o a un molt propera.
+
+\subsection*{M\'etodes h\'ibrids}
+\quad Tot i que s'havien considerat l'implementac\'io de m\`etodes h\'ibrids que ens garanteixen la converg\`encia i baix cost, despr\`es de observa el comportament de la funci\'o la vam veure innecess\`aria i no va caldre implementar un nm\`etode h\'ibrid de la bissecci\'o i la secant. 
+\\\\
+
+\subsection*{Aproximaci\'o de la derivada}
+\quad Com hem comentat abans, el problema de Newton es que no tenim una funci\'o expl\'icita per calcular la derivadar. Per\`o podem recordar que la definici\'o de la derivada:
+	 $$\lim_{t\to0} \frac{f(x+t) - f(x)}{t}$$ \\
+Llavors per poder aproximar la derivada nom\'es cal pendre un $\epsilon$ prou petit tal que $$g'(\theta) \simeq \frac{g(\theta+\epsilon) - g(\theta)}{\epsilon}$$
+\end{document}
