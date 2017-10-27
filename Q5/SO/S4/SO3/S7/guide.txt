@@ -1,0 +1,41 @@
+CI: Interfie de computadoras
+- NOTA FINAL: 50%NT+50%NL
+	NT= 3 pruebas escritas individuales
+	NL= 50% evaluación de las practicas 50% examen final de practicas
+Ejericcios propuestos en modul que no cuenta rollo BD para estar al día
+Libros solo en ingles
+
+SO: Sistemas Operativos
+	- Nota final
+		Continua: 
+		50% teoria (dos parciales 40% y 60% en el segundo entra lo del primero) 
+		50% LAB (dos examenes de lab 45% cada uno el otro 10% del minitest al llegar a clase
+		como en BD de los ejercicios que se tenian que hacer durante la clase anterior). Aparte
+		ejercicios previos en atenea. Hay que realizar un 80% de las sesiones para tener eva. cont.
+			
+		No continua--> examen final --> death
+Bibliografia en ingles
+
+
+PE: probilidad y estadistica
+Bibliografia buena: estadistica para ingenieros informaticos
+Tambien se puede aprobar por continua
+6 bloques +1 la transversal cada bloque genera una nota si es => 5 no hace falta ir al final. La nota de los 6 
+probleques se saca de dos parciales. Con el trabajo de clase un test, ejercicios en clase y ejercicios previso se
+saca un factor de blque que aumenta entree 0 y 25% la puntuacion del ejercicio del bloque en el parcial. FLIPA
+
+cada bloque 2 semanas 2 clases de teoria  y 2 de lab. 
+
+
+EDA
+Bibliografia en ingles
+no se puede evaluar por continua
+NPP = nota de l'examen parcial de paper (entre 0 i 10) 
+NPO = nota de l'examen parcial d'ordinador (entre 0 i 10) 
+NF = nota de l'examen final (entre 0 i 10) 
+NJ = nota del joc (entre 0 i 10) 
+
+NOTA = mín(10, màx (30%NPP + 30%NPO + 30%NF + 20%NJ , 30%NPO + 60%NF + 20%NJ))
+
+
+

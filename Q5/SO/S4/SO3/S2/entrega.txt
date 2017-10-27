@@ -1,0 +1,8 @@
+Yeison Melo
+Sesion 2
+
+18. 
+
+Añadiendo la opción -o cuando compilamos solo nos generará el archivo o. para poder utilizar sus funciones en otros programas sin necesidad de que se acceda al código de estas. 
+
+Para añadir archivos .h que se encuentran en otras carpetas basta con poner la opción -i seguido de la ruta

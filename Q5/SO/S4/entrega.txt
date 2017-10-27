@@ -1,0 +1,25 @@
+1. En 5 segundos el programa sigue esperando a una señal. Cuando pasan 10 le llega una señal alarm y se cierra.
+
+2. No, se mata el programa por una señal KILL.
+
+3. el stderr, 
+
+4. No, no se ejecuta pues sigsuspend cierra el programa tras recibir la señal SIGALARM.
+
+-----------
+
+1. El programa se cierra tras 100 segundos, pero para contar este tiempo cuenta 10 señales de SIGALARM, entonces cuando llega una señal externa (kill -ALRM pid) se aceleran 10 segundos.
+
+2. No, SIGSTOP y SIGKILL no se pueden modificar
+
+3. si una alarma no es del temporizador, devolvera un valor no nulo que son los segundos antes de que acabe el alarm anterior.
+
+-----------
+
+1. ambos, se escriben los pid's por terminal
+
+-----------
+
+1. el hijo, como el padre no genera un SIGALARM antes del sigsuspend se queda esperando indefinidamente. El hijo genera 10 SIGALARMS.
+
+-----------

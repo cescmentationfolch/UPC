@@ -1,0 +1,114 @@
+Yeison Melo
+SO
+Sesion Laboratorio 3
+01/10/2013
+
+1. ejemplo_fork1
+
+"Soy el proceso 2365
+Soy el proceso 2366"
+
+Nuestro proceso original crea un subproceso, primero mostramos el identificador del padre y después el del hijo. Dado que pasan a ejecutarse simultaneamente deduzco que este es el orden por el numero de identificado de cada uno.
+
+2.ejemplo_fork2
+
+"Antes del fork: Soy el proceso 2392
+PADRE: Soy el proceso 2392
+Los DOS: Soy el proceso 2392
+HIJO: Soy el proceso 2393
+Los DOS: Soy el proceso 2393"
+
+Primero mostramos el identificador del proceso que acabamos de crear. Acto seguido creamos un subproceso y pasan a  ejecutarse padre e hijo simultaneamente. 
+Padre ejecuta la parte default del switch mostrando su identificador de nuevo y  una vez más antes de acabar el programa. Hijo ejecuta el caso 0 del switch ya que este es el valor que tiene la variable que devuelve fork a los hijos.  Antes de acabar vuelve a mostrar su identificador. 
+
+
+
+3. ejemplo_fork3
+
+"Antes del fork: Soy el proceso 2407
+PADRE: Soy el proceso 2407
+Solo lo ejecuta el padre: Soy el proceso 2407
+Soy el proceso 2408"
+
+Proceso principal muestra su identificador. Acto seguido crea un subproceso y pasan  ejecutarse de forma concurrente. Antes de acabar el proceso padre vuelve a mostrar su identificador, esta instrucción solo la ejecuta el proceso padre ya que cuando pasamos a ejecutar el hijo este entra en el caso 0 del switch, por las razones vistas en el ejemplo 2, y acaba su ejecución de forma voluria con exit() después de mostrar su identificador. 
+
+4. ejemplo_fork4
+
+"Antes del fork: Soy el proceso 2417
+PADRE: Soy el proceso 2417
+Solo lo ejecuta el padre: Soy el proceso 2417
+HIJO: Soy el proceso 2418
+HIJO acaba: Soy el proceso 2418"
+
+Proceso padre muestra su identificador acto seguido crea un subproceso (hijo) y pasan a ejecutarse de forma simultanea. El padre ejecuta el caso default del switch. Pasa a ejecutarse el hijo entrando en el caso 0 del switch mediante la varaible pid que vale 0 (razon ejemplo 2) muestra su identificador y segundos después lo vuelve a mostrar, ya que primero ejecuto un bucle después finaliza de forma voluntaria con exit(). Código modificado para que el padre espere al hijo antes de finalizar en archivo adjunto...
+
+Antes del fork: Soy el proceso 2888
+PADRE: Soy el proceso 2888
+HIJO: Soy el proceso 2889
+HIJO acaba: Soy el proceso 2889
+Solo lo ejecuta el padre: Soy el proceso 2888
+
+
+5. ejemplo_fork5
+
+"Antes del fork: Soy el proceso 2428
+PADRE: Soy el proceso 2428
+HIJO: Soy el proceso 2429
+HIJO:La variable_global vale A y la local a
+PADRE:La variable_global vale A y la local a
+Solo lo ejecuta el padre: Soy el proceso 2428"
+
+El proceso original muestra su identificador y crea un subproceso. Pasan a ejecutarse de forma simultanea. El padre ejecuta el caso default del siwthc y vuelve a mostrar su identificador, después ejecuta  waitpid por lo que esperará a que el subproceso que creo al principio finalize para continua con su ejecución. Pasamos a ejecutar el subproceso mientras el padre espera. Entra en el caso 0 del switch: mostramos su identificador y comprobamos que es una copia casi exacta del padre mostrando el valor de variables loca les y globales, acto seguido finaliza con exit(). El proceso padre principal ya puede seguir ejecutandose muestra variables locales y globales que coinciden con las que mostro su subproceso anteriormente como era de esperar. Vuelve a mostrar su identificador y finaliza. 
+
+Si modificamos las variables globales y locales en el proceso hijo en el padre siguen con su valor original [ver archivo adjunto]: 
+
+Antes del fork: Soy el proceso 2661
+PADRE: Soy el proceso 2661
+HIJO: Soy el proceso 2662
+HIJO:La variable_global vale B y la local b
+PADRE:La variable_global vale A y la local a
+Solo lo ejecuta el padre: Soy el proceso 2661
+
+
+6. ejemplo_fork6
+El programa como los anteriores muestra primero el identificador del proceso principal después crea un subproceso. Pasan a ejecutarse de forma simultanea. El proceso hijo ejecuta el caso 0 del swithc y el padre el default. El hijo acaba con exit alfinal del caso 0 mientras que el padre muestra una vez más su identificador antes de acabar el proceso.
+
+Ambos procesos al entrar en el caso del switch que les toca muestran su identificador y ejecutan un bucle "costoso" de unas 100000 iteraciones. Dado que se estan ejeuctando de forma simultanea  en la CPU. No podemos afirmar que el tendrá siempre el mismo ya que la CPU se reparte entre ambos procesos siguiendo sus propios mecanismos que puede variar de un equipo a otro y del harware de este. Por lo tanto el orden de impresión de las lineas no será siempre el mismo. 
+
+
+7. ejemplo_fork7
+
+No compila por dos razones la primera es que la función que se llama utiliza variable_local que no esta definida en el ambito de la función, pasa solucionar este error pasamos la variable por parametro. El segundo error se produce por ejecutar exit() sin haber añadido la libreria stdlib.h, ninguno de los problemas tenia relación con la creación de un subproceso sino en el código original. Ver archivo adjunto...
+
+Antes del fork: Soy el proceso 2870
+PADRE: Soy el proceso 2870
+Funcion:La variable_global vale A y la local a
+Solo lo ejecuta el padre: Soy el proceso 2870
+HIJO: Soy el proceso 2871
+Funcion:La variable_global vale A y la local a
+
+Como en los casos anetrior proceso principal crea subproceso y pasan a ejecutarse de forma simultanea. Cada uno entra en un caso del swtich muestra su identificador y llaman a la función escribir_mensaje. El hijo finaliza mediante exit() al final de su caso en el switch y el padre antes de finalizar el proceso principal muestra su identificador
+
+
+
+8. ejemplo_exec1
+
+Primero muestra el identificador del proceso y después muestra el contenido detallado del directorio. El indentificador del proceso solo se visualiza una vez ya que el proceso muta antes de volver a mostrarlo mediante el comando execlp que modifica todo el codigo del proceso solo manteniendo la identidad de este. 
+
+
+9. ejemplo_exec2
+Soy el proceso: 2923
+Soy el proceso 2923
+Soy el proceso 2924
+
+El proceso muestra 3 identificadores. Los primeros coinciden ya que son el identificador del proceso principla exec2 uno lo muestra con su código original y el otro una vez ha mutado al código del ejemplo1, ya que la información que indentifica al proceso se mantiene aunque este mute. El tercer identificador corresponde al subproceso que se crea en el codigo de ejemplo2. 
+
+----------------
+No me ha sido necesario consultar webs i/o paginas de man para utilizar las instruciones solo he consulta las diapositivas de clase. 
+
+
+
+
+
+
+

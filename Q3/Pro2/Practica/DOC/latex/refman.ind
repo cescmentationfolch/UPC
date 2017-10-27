@@ -1,0 +1,101 @@
+\begin{theindex}
+
+  \item {avaluar}
+    \subitem {main.\+cc}, \hyperpage{18}
+
+  \indexspace
+
+  \item {buscar}
+    \subitem {variable}, \hyperpage{15}
+
+  \indexspace
+
+  \item {c\+\_\+resultat}
+    \subitem {resultat}, \hyperpage{10}
+  \item {consultar\+\_\+var}
+    \subitem {variable}, \hyperpage{14}
+
+  \indexspace
+
+  \item {entrada}
+    \subitem {resultat\+\_\+lectura}, \hyperpage{13}
+  \item {es\+\_\+bool}
+    \subitem {resultat}, \hyperpage{9}
+  \item {es\+\_\+def\+\_\+op}
+    \subitem {resultat\+\_\+lectura}, \hyperpage{12}
+  \item {es\+\_\+def\+\_\+var}
+    \subitem {resultat\+\_\+lectura}, \hyperpage{12}
+  \item {es\+\_\+enter}
+    \subitem {resultat}, \hyperpage{10}
+  \item {es\+\_\+expressio}
+    \subitem {resultat\+\_\+lectura}, \hyperpage{12}
+  \item {es\+\_\+indefinit}
+    \subitem {resultat}, \hyperpage{10}
+  \item {es\+\_\+llista}
+    \subitem {resultat}, \hyperpage{9}
+
+  \indexspace
+
+  \item {fi\+\_\+entrada}
+    \subitem {resultat\+\_\+lectura}, \hyperpage{13}
+
+  \indexspace
+
+  \item {guardar\+\_\+operacio}
+    \subitem {operacio}, \hyperpage{8}
+  \item {guardar\+\_\+variable}
+    \subitem {variable}, \hyperpage{14}
+
+  \indexspace
+
+  \item {main}
+    \subitem {main.\+cc}, \hyperpage{18}
+  \item {main.\+cc}, \hyperpage{17}
+    \subitem {avaluar}, \hyperpage{18}
+    \subitem {main}, \hyperpage{18}
+
+  \indexspace
+
+  \item {operacio}, \hyperpage{7}
+    \subitem {guardar\+\_\+operacio}, \hyperpage{8}
+    \subitem {operacio}, \hyperpage{7}
+    \subitem {operar}, \hyperpage{8}
+  \item {operacio.\+hh}, \hyperpage{19}
+  \item {operar}
+    \subitem {operacio}, \hyperpage{8}
+
+  \indexspace
+
+  \item {print}
+    \subitem {resultat}, \hyperpage{11}
+
+  \indexspace
+
+  \item {resultat}, \hyperpage{8}
+    \subitem {c\+\_\+resultat}, \hyperpage{10}
+    \subitem {es\+\_\+bool}, \hyperpage{9}
+    \subitem {es\+\_\+enter}, \hyperpage{10}
+    \subitem {es\+\_\+indefinit}, \hyperpage{10}
+    \subitem {es\+\_\+llista}, \hyperpage{9}
+    \subitem {print}, \hyperpage{11}
+    \subitem {resultat}, \hyperpage{9}
+  \item {resultat.\+hh}, \hyperpage{19}
+  \item {resultat\+\_\+lectura}, \hyperpage{11}
+    \subitem {entrada}, \hyperpage{13}
+    \subitem {es\+\_\+def\+\_\+op}, \hyperpage{12}
+    \subitem {es\+\_\+def\+\_\+var}, \hyperpage{12}
+    \subitem {es\+\_\+expressio}, \hyperpage{12}
+    \subitem {fi\+\_\+entrada}, \hyperpage{13}
+    \subitem {resultat\+\_\+lectura}, \hyperpage{12}
+  \item {resultat\+\_\+lectura.\+hh}, \hyperpage{20}
+
+  \indexspace
+
+  \item {variable}, \hyperpage{14}
+    \subitem {buscar}, \hyperpage{15}
+    \subitem {consultar\+\_\+var}, \hyperpage{14}
+    \subitem {guardar\+\_\+variable}, \hyperpage{14}
+    \subitem {variable}, \hyperpage{14}
+  \item {variable.\+hh}, \hyperpage{20}
+
+\end{theindex}

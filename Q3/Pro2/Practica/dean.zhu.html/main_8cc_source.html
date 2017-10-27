@@ -1,0 +1,92 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.12"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Calculadora d’expressions aritmetiques: Fichero Fuente main.cc</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Calculadora d’expressions aritmetiques
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Generado por Doxygen 1.8.12 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search",false,'Buscar');
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',true,false,'search.php','Buscar');
+  $(document).ready(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="headertitle">
+<div class="title">main.cc</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="main_8cc.html">Ir a la documentación de este archivo.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#ifndef NO_DIAGRAM</span></div><div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="preprocessor">#include &lt;list&gt;</span></div><div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="preprocessor">#endif</span></div><div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="operacio_8hh.html">operacio.hh</a>&quot;</span></div><div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="variable_8hh.html">variable.hh</a>&quot;</span></div><div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="resultat__lectura_8hh.html">resultat_lectura.hh</a>&quot;</span></div><div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="resultat_8hh.html">resultat.hh</a>&quot;</span></div><div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="keyword">using namespace </span><a class="code" href="namespacestd.html">std</a>;</div><div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;</div><div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;<a class="code" href="classresultat.html">resultat</a> <a class="code" href="main_8cc.html#a8618a4d38a75efdcc6be493e3b42907f">avaluar</a>(list &lt;string&gt; &amp; op, list&lt;string&gt;::iterator &amp; it);</div><div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;</div><div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;</div><div class="line"><a name="l00035"></a><span class="lineno"><a class="line" href="main_8cc.html#ae66f6b31b5ad750f1fe042a706a4e3d4">   35</a></span>&#160;<span class="keywordtype">int</span> <a class="code" href="main_8cc.html#ae66f6b31b5ad750f1fe042a706a4e3d4">main</a>(){</div><div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;    <a class="code" href="classoperacio.html">operacio</a> o;</div><div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;    <a class="code" href="classvariable.html">variable</a> v;</div><div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;    <span class="keywordflow">while</span>(<span class="keyword">true</span>){</div><div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;        <a class="code" href="classresultat__lectura.html">resultat_lectura</a> rl;</div><div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;        <span class="keywordflow">if</span>(rl.<a class="code" href="classresultat__lectura.html#a178d0aae65fbce754ec5d99a04732bf0">fi_entrada</a>()) <span class="keywordflow">return</span> 0;</div><div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;        list&lt;string&gt; l = rl.<a class="code" href="classresultat__lectura.html#a2b6b1c0d200ea75619f7ad50600551c6">entrada</a>();</div><div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;        <span class="keywordflow">if</span>(rl.<a class="code" href="classresultat__lectura.html#a4c84ef4ddea623e7a680c639c084d11d">es_def_var</a>()){</div><div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;            <a class="code" href="classresultat.html">resultat</a> r;</div><div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;            list&lt;string&gt;::iterator it = l.begin();</div><div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;            <span class="keywordtype">string</span> nom = *it;</div><div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;            ++it;</div><div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;            r = <a class="code" href="main_8cc.html#a8618a4d38a75efdcc6be493e3b42907f">avaluar</a>(l,it);</div><div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;            v.<a class="code" href="classvariable.html#ac8e2c3022d51e243b4c336c023300d28">guardar_variable</a>(nom ,r);</div><div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;        }</div><div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;        <span class="keywordflow">else</span> <span class="keywordflow">if</span>(rl.<a class="code" href="classresultat__lectura.html#ac1f77e1379c99557c3bfdf2d627594f0">es_def_op</a>()){</div><div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;            o.<a class="code" href="classoperacio.html#aa1f42a80cc416ff33caea9898fe3c9b9">guardar_operacio</a>(l);</div><div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;        }</div><div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;        <span class="keywordflow">else</span> <span class="keywordflow">if</span> (rl.<a class="code" href="classresultat__lectura.html#a0e73a239ad6dd63b591105a5553bef6f">es_expressio</a>()){</div><div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;            list&lt;string&gt;::iterator it = l.begin();</div><div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;            <a class="code" href="classresultat.html">resultat</a> r = <a class="code" href="main_8cc.html#a8618a4d38a75efdcc6be493e3b42907f">avaluar</a>(l, it);</div><div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;            r.<a class="code" href="classresultat.html#adaa9aa55a0a9891a24f7dc04c4c1ebf2">print</a>();</div><div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;        }</div><div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;</div><div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;    }</div><div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;</div><div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;}</div><div class="ttc" id="classresultat__lectura_html"><div class="ttname"><a href="classresultat__lectura.html">resultat_lectura</a></div><div class="ttdoc">Guarda la informació necessària per entendre i tractar l’entrada de la pràctica. ...</div><div class="ttdef"><b>Definition:</b> <a href="resultat__lectura_8hh_source.html#l00014">resultat_lectura.hh:14</a></div></div>
+<div class="ttc" id="classvariable_html"><div class="ttname"><a href="classvariable.html">variable</a></div><div class="ttdoc">Conté les variables que s’han definit. </div><div class="ttdef"><b>Definition:</b> <a href="variable_8hh_source.html#l00017">variable.hh:17</a></div></div>
+<div class="ttc" id="classresultat__lectura_html_ac1f77e1379c99557c3bfdf2d627594f0"><div class="ttname"><a href="classresultat__lectura.html#ac1f77e1379c99557c3bfdf2d627594f0">resultat_lectura::es_def_op</a></div><div class="ttdeci">bool es_def_op() const</div><div class="ttdoc">Consultora 2. </div></div>
+<div class="ttc" id="classresultat_html_adaa9aa55a0a9891a24f7dc04c4c1ebf2"><div class="ttname"><a href="classresultat.html#adaa9aa55a0a9891a24f7dc04c4c1ebf2">resultat::print</a></div><div class="ttdeci">void print() const</div><div class="ttdoc">treu per pantalla la informacio del resultat tal i com explicita l&amp;#39;enunciat </div></div>
+<div class="ttc" id="classresultat__lectura_html_a0e73a239ad6dd63b591105a5553bef6f"><div class="ttname"><a href="classresultat__lectura.html#a0e73a239ad6dd63b591105a5553bef6f">resultat_lectura::es_expressio</a></div><div class="ttdeci">bool es_expressio() const</div><div class="ttdoc">Consultora 3. </div></div>
+<div class="ttc" id="namespacestd_html"><div class="ttname"><a href="namespacestd.html">std</a></div></div>
+<div class="ttc" id="variable_8hh_html"><div class="ttname"><a href="variable_8hh.html">variable.hh</a></div></div>
+<div class="ttc" id="main_8cc_html_ae66f6b31b5ad750f1fe042a706a4e3d4"><div class="ttname"><a href="main_8cc.html#ae66f6b31b5ad750f1fe042a706a4e3d4">main</a></div><div class="ttdeci">int main()</div><div class="ttdoc">Programa principial de la pràctica. </div><div class="ttdef"><b>Definition:</b> <a href="main_8cc_source.html#l00035">main.cc:35</a></div></div>
+<div class="ttc" id="classoperacio_html_aa1f42a80cc416ff33caea9898fe3c9b9"><div class="ttname"><a href="classoperacio.html#aa1f42a80cc416ff33caea9898fe3c9b9">operacio::guardar_operacio</a></div><div class="ttdeci">bool guardar_operacio(const list&lt; string &gt; &amp;expressio)</div><div class="ttdoc">Serveix per guardar una nova operació </div></div>
+<div class="ttc" id="operacio_8hh_html"><div class="ttname"><a href="operacio_8hh.html">operacio.hh</a></div></div>
+<div class="ttc" id="resultat_8hh_html"><div class="ttname"><a href="resultat_8hh.html">resultat.hh</a></div></div>
+<div class="ttc" id="classoperacio_html"><div class="ttname"><a href="classoperacio.html">operacio</a></div><div class="ttdoc">Conté les operacions que s’han definit i les opera quan apareixen a una expressió ...</div><div class="ttdef"><b>Definition:</b> <a href="operacio_8hh_source.html#l00016">operacio.hh:16</a></div></div>
+<div class="ttc" id="resultat__lectura_8hh_html"><div class="ttname"><a href="resultat__lectura_8hh.html">resultat_lectura.hh</a></div></div>
+<div class="ttc" id="classresultat__lectura_html_a2b6b1c0d200ea75619f7ad50600551c6"><div class="ttname"><a href="classresultat__lectura.html#a2b6b1c0d200ea75619f7ad50600551c6">resultat_lectura::entrada</a></div><div class="ttdeci">list&lt; string &gt; entrada() const</div><div class="ttdoc">Consultora 4. </div></div>
+<div class="ttc" id="classresultat_html"><div class="ttname"><a href="classresultat.html">resultat</a></div><div class="ttdoc">Objecte que representa el resultat d&amp;#39;una operació </div><div class="ttdef"><b>Definition:</b> <a href="resultat_8hh_source.html#l00013">resultat.hh:13</a></div></div>
+<div class="ttc" id="classresultat__lectura_html_a178d0aae65fbce754ec5d99a04732bf0"><div class="ttname"><a href="classresultat__lectura.html#a178d0aae65fbce754ec5d99a04732bf0">resultat_lectura::fi_entrada</a></div><div class="ttdeci">bool fi_entrada() const</div><div class="ttdoc">Consultora 5. </div></div>
+<div class="ttc" id="main_8cc_html_a8618a4d38a75efdcc6be493e3b42907f"><div class="ttname"><a href="main_8cc.html#a8618a4d38a75efdcc6be493e3b42907f">avaluar</a></div><div class="ttdeci">resultat avaluar(list&lt; string &gt; &amp;op, list&lt; string &gt;::iterator &amp;it)</div><div class="ttdoc">Avalua una expressió </div></div>
+<div class="ttc" id="classvariable_html_ac8e2c3022d51e243b4c336c023300d28"><div class="ttname"><a href="classvariable.html#ac8e2c3022d51e243b4c336c023300d28">variable::guardar_variable</a></div><div class="ttdeci">bool guardar_variable(string nom, const resultat &amp;r)</div><div class="ttdoc">Serveix per guardar una nova variable. </div></div>
+<div class="ttc" id="classresultat__lectura_html_a4c84ef4ddea623e7a680c639c084d11d"><div class="ttname"><a href="classresultat__lectura.html#a4c84ef4ddea623e7a680c639c084d11d">resultat_lectura::es_def_var</a></div><div class="ttdeci">bool es_def_var() const</div><div class="ttdoc">Consultora 1. </div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Generado por &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.12
+</small></address>
+</body>
+</html>
