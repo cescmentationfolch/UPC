@@ -1,0 +1,6 @@
+1. 0
+2. ./read < data.in
+3. ps -aux | grep <username>
+4. es7_lector.c
+5. 4 y 5, uno es en representacion interna mientras que el otro es convertida a digitos.
+6. Instalacion fallida en ArchLinux

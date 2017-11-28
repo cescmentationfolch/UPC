@@ -1,0 +1,15 @@
+1)
+mknod myPipe p
+shell1 cat > myPipe
+shell2 cat myPipe
+
+2)
+en una mateixa terminal: si
+en diferents: no, a una pipe sense nom nomes podem accedir des d'una mateixa ternminal.
+
+3)
+write(4, ...);
+
+4)
+createsocket - crea un soccet de unix i li associa l'id especificat, l'hi assigna un file descriptor i es queda escoltant.
+serveConnection - accepta una nova connexio a un socket.
