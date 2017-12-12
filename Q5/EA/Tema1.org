@@ -5,9 +5,20 @@
 
 * TODO Grup
 * TODO Interseccio, unio, producte i generacio
+* Elements d'un grup
+** Definicio Centre
+Sigui G un grup, llavors el Centre G es \( \mathcal{Z}(G) = \{ a \in G \mid aba^{-1} = b \quad \forall b \in G \} = \{ a \in G \mid ab = ba \quad \forall b \in G \} \).
+
+** Definicio Centralitzador
+Sigui G un grup, i H un subgrup de G llavors el Centralitzador de H en G es \( \mathcal{Z}_{G}(H) = \{ a \in G \mid aba^{-1} = b \quad \forall b \in H \} = \{ a \in G \mid ab = ba \quad \forall b \in H \} \).
+
+** Definicio Normalitzador
+Sigui G un grup, i H un subgrup de G, llavors el normalitzador de H en G es N_{G}(H) = \( \{ a \in G \mid aHa^{-1} = H \} = \{ a \in G \mid aH = Ha \} \).
+
+*** Observacio:
+ Normalitzador de H en G = G \( \iff H \vartriangleleft G\)
 * TODO Ordre d'un element, grup ciclic
 * TODO Morfismes de grups
-
 * Classes laterals
 ** Definicio
    Sigui G un grup i H in subgrup de G. $a,b \in G$. \\
@@ -80,7 +91,7 @@ Sigui $\mathbb{K}$ un cos. El grup multiplicatiu de $\mathbb{K}$ és \\
 Sigui $\mathbb{K}$ un cos. Sigui G un subgrup finit de $\mathbb{K}^*$. Aleshores G és cíclic
 
 *** TODO demo
-    
+
 * Grup simples
 ** Definicio
    Sigui G un grup no trivial. Direm que G es simple si els unics subgrups normals de G son {1} i G.
@@ -91,7 +102,7 @@ Sigui $\mathbb{K}$ un cos. Sigui G un subgrup finit de $\mathbb{K}^*$. Aleshores
    3. $G \cong \mathbb{Z}/p\mathbb{Z}$
 
 *** TODO Demo
-** Teorema de Feit-Thompspn
+** Teorema de Feit-Thompson
    Sigui G grup simple, Suposem |G| es senar. Aleshores G es ciclic i $G \cong \mathbb{Z}/p\mathbb{Z}$.
 ** Teorema
    Sigui n $\geq$ 5, Aleshores $\mathcal{A}_n$ es simple
@@ -168,15 +179,15 @@ Concretament, si y = ax $\implies G_y = aG_{x}a^{-1}$
 *** TODO DEMO
 
 ** Proposicio
-   L'aplicacio 
+   L'aplicacio
 \begin{alignat*}{3}
 G \cdot x &\to \sfrac{G}{G_x}& \\
 ax &\mapsto a\cdot G_x&
 \end{alignat*}
 esta ben definida i es bijectiva. En particular, \\
-1. $\vert G \cdot x \vert = \vert \sfrac{G}{G_x}\vert = [G:G_x]$
-2. Si G es finit, $\vert G \cdot x \vert \text{ divideix } \vert G \vert$
-3. Si X es finit, $\vert X \vert = \sum_{i=1}^{n} \vert G \cdot x_i \vert = \sum_{i=1}^n [G:G_{x_i}]$
+1. $\lvert G \cdot x \rvert = \lvert \sfrac{G}{G_x} \rvert = [G:G_x]$
+2. Si G es finit, $\lvert G \cdot x \rvert \big{|} \lvert G \rvert$
+3. Si X es finit, $\lvert X \rvert = \sum_{i=1}^{n} \lvert G \cdot x_i \rvert = \sum_{i=1}^n [G:G_{x_i}]$
 *** TODO DEMO
 
 ** Definicio: punt fix
@@ -184,7 +195,7 @@ $x \in X$ es un punt fix per l'accio si ax = x $\forall a \in G$. En particular\
 $G \cdot x = \{ax \mid a \in G\} = \{x\}$, $G_x = \{ a \in G \mid ax = x \} = G$
 
 ** Definicio: Accio Transitiva
-$G \times X \to X$ es accio transitiva si \forall x,y \in X, \exists a \in G \text{ tal que } y = ax. \\ 
+$G \times X \to X$ es accio transitiva si \forall x,y \in X, \exists a \in G \text{ tal que } y = ax. \\
 En aquest cas. G \cdot y = X \forall \quad y \in X.
 
 ** Definicio: Accio Fidel
@@ -204,28 +215,27 @@ Sigui G un grup, definim
 &G \times &G &\to G \\
 &a &x &\mapsto a \cdot x = ax
 \end{alignat*}
-I es efectivament una accio. 
+I es efectivament una accio.
 ** Teorema de Cayley
 Sigui G un grup finit, n = |G|. Aleshores G es isomorf a un subgrup del grup simetric $\mathcal{S}_n$
 *** TODO Demo
 
 
 ** Definicio: Accio per conjugacio de G en X = G
-#+NAME: proposicio
 \begin{alignat*}{4}
 &G \times &G &\to G \\
 &a &x &\mapsto a \cdot x = axa^{-1}
 \end{alignat*}
 
-*** Proposicio: 
+*** Centre
 
 $x \in G \text{ es punt fix } \iff a \cdot x = x \quad \forall a \in G \iff axa^{-1} = x \forall a \in G \iff ax = xa \quad \forall a \in G \iff x \in \mathcal{Z}(G) = \{ x \in G \mid ax = xa \quad \forall a \in G \} = \text{ centre de G}$. El centre de G es subgrup.
 
-*** Proposicio:
+*** Centralitzador
 L'estabilitzador de y \in G es $G_y = \{a \in G \mid a \cdot y = y \} = \{ a \in G \mid aya^{-1} = y \} = \{ a \in G \mid ay = ya \} = \mathcal{Z}_{G}(y)$,  centralitzador de G. El centralitzador tambe es un subgrup de G.
 
 ** Definicio: Accio per translacio en les classes laterals
-Sigui G grup, H subgrup de G i X = $\sfrac{G}{H}$ = { aH \mid a \in G}
+Sigui G grup, H subgrup de G i X = \( \sfrac{G}{H} = \{ aH \mid a \in G\}\)
 \begin{alignat*}{4}
 &G \times &\sfrac{G}{H} &\to \sfrac{G}{H} \\
 &a &bH &\mapsto abH
@@ -238,15 +248,22 @@ Sigui G grup, H subgrup de G i X = $\sfrac{G}{H}$ = { aH \mid a \in G}
 ** Definicio: Accio per conjugacio en els subgrups
 Sigui G grup i \( X = \{ H \mid \text{ H subgrup de G} \}. \)
 \begin{alignat*}{4}
-&G \times &\text{\{sg. de yG\}} &\to \text{\{sg. de G\}, conjugat de H} \\
+&G \times &\text{\{sg. de G\}} &\to \text{\{sg. de G\}, conjugat de H} \\
 &a &H &\mapsto aHa^{-1}
 \end{alignat*}
+
 Si H es subgrup de G, l'orbita d'H es: \\
-\(G\cdot H =\{a \cdot H\mid a\in G \} = \{aHa^{-1} \mid a \in G \} \text{: els conjugats de H} \) \\
-H es punt fix per l'accio si \(a\dotH = H \iff aHa^{-1} = H \quad \forall a \in G \iff \text{H es subgrup normal de G} \) 
-L'estabilitzador de H es: \( G_H = \{a \in G \mid a \cdot H\} = \{ a \in \G \mid aHa^{-1} = H \} = N_{G}(H)\): Normalitzador de H en G\\
-Sabem que \( \vert G \cdot H\vert = [G : G_H ]. \) Per tant. \\
-\( H \vartriangleleft G \iff \text{H es punt fix per l'accio} \iff \text{L'orbita de H te un sol punt } \iff \vert G \cdot H \vert = 1 \iff [ G : G_H] = 1 \iff G_H = G \iff N_{G}(H) = G \) 
+\(G\cdot H =\{a \cdot H\mid a\in G \} = \{aHa^{-1} \mid a \in G \} \text{: els conjugats de H} \)
+
+
+H es punt fix per l'accio si \(a \cdot H = H \iff aHa^{-1} = H \quad \forall a \in G \iff \text{H es subgrup normal de G} \)
+
+
+L'estabilitzador de H es: \( G_H = \{a \in G \mid a \cdot H = H \} = \{ a \in G \mid aHa^{-1} = H \} = N_{G}(H)\): Normalitzador de H en G
+
+
+Sabem que \( \lvert G \cdot H\rvert = [G : G_H ]. \) Per tant. \\
+\( H \vartriangleleft G \iff \text{H es punt fix per l'accio} \iff \text{L'orbita de H te un sol punt } \iff \lvert G \cdot H \rvert = 1 \iff [G : G_H] = 1 \iff G_H = G \iff N_{G}(H) = G \)
 
 ** Teorema de Cauchy
 Sigui G un grup finit, |G| = n. Sigui p primer tal que p|n. \\
@@ -257,7 +274,8 @@ ALeshores, \exists x \in G tal que ord(x) = p
 * Subgrups de Sylow
 
 ** Definicio: p-grups: Subgrups de Sylow
-Sigui G un grup i p un nombre primer. Aleshores,  G es un p-grup \iff \vert G \vert = p^r per a algun r \geq 0.
+Sigui G un grup i p un nombre primer. Aleshores,  G es un p-grup
+\( \iff \lvert G \rvert = p^r \) per a algun r \geq 0.
 
 ** Teorema:
 Sigui G un p-grup. Aleshores, |G| = p^r, r \geq 0, i:
@@ -265,4 +283,31 @@ Sigui G un p-grup. Aleshores, |G| = p^r, r \geq 0, i:
 2. G es resoluble
 3. si G es simple, aleshores G \( \cong \sfrac{\mathbb{Z}}{p\mathbb{Z}} \)
 
+
+*** TODO demo
+
 * Teoremas de Sylow
+
+** Teorema: Primer Teorema de Sylow
+Sigui G un grup finit i considerem p primer, r \geq 0. \\
+Aleshores, si \( p^r \big{|} \lvert G \rvert \implies G \text{ conte un subgrup d'ordre } p^r\)
+
+** Definicio
+Sigui G grup finit, \( \lvert G \rvert = p^r \cdot m \), p primer, r \geq 0, p $\nmid$ m.\\
+Denotem S_{y}l_{p}(G) = \( \{ H \mid \text{H subgrup de G, } \lvert H \rvert = p^r \} \). \\
+Els anomenem els p-subgrups de Sylow de G (p-Sylow de G) i denotem n_{p}(G) = cardinal de S_{y}l_{p}(G).
+
+*** Observacio:
+1. El conjugat d'un p-Sylow es un p-Sylow ja que \( \lvert H \rvert = \lvert aHa^{-1} \rvert \).
+2. Els P-subgrups son  \( \{ H \mid \text{H subgrup de G, } \lvert H \rvert = p^s, s \leq r \} \).
+
+
+** Teorema: Segon Teorema de Sylow
+Sigui G grup finit, \( \lvert G \rvert = p^r \cdot m \), p primer, r \geq 0, p $\nmid$ m.\\
+
+1. Si L es un p-subgrup de G ( \( \lvert L \rvert = p^s, s \leq r \) ). Aleshores \( \exists H \in S_{y}l_{p}(G) \text{ tal que } L \subseteq H \)
+2. Si H i P son dos p-Sylow de G. Aleshores \( \exists a \in G \text{ tal que } aHa^{-1} = P. \), Es a dir, tots els p-Sylow son conjugats.
+3. n_{p}(G) \equiv 1 (mod p) i n_{p}(G)|m.
+
+
+*** TODO Demo
