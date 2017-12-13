@@ -1,5 +1,0 @@
-all:listaParametros
-listaParametros:
-	gcc -o listaParametros listaParametros.c
-clean:
-	rm listaParametros
