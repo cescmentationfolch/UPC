@@ -1,4 +1,4 @@
-% Created 2017-12-11 Mon 14:06
+% Created 2017-12-12 mar 19:38
 % Intended LaTeX compiler: pdflatex
 \documentclass[11pt]{article}
 \usepackage[utf8]{inputenc}
@@ -16,14 +16,15 @@
 \usepackage{hyperref}
 \usepackage[margin=3cm]{geometry}
 \usepackage{xfrac}
+\author{Dean}
 \date{\today}
 \title{Estructures Algebraiques: Tema 1}
 \hypersetup{
- pdfauthor={},
+ pdfauthor={Dean},
  pdftitle={Estructures Algebraiques: Tema 1},
  pdfkeywords={},
  pdfsubject={},
- pdfcreator={Emacs 25.3.1 (Org mode 9.1.3)}, 
+ pdfcreator={Emacs 25.3.1 (Org mode 9.1.3)},
  pdflang={English}}
 \begin{document}
 
@@ -33,86 +34,102 @@
 
 
 \section{{\bfseries\sffamily TODO} Grup}
-\label{sec:org03bf409}
+\label{sec:org530c9c2}
 \section{{\bfseries\sffamily TODO} Interseccio, unio, producte i generacio}
-\label{sec:org0ee59dc}
-\section{{\bfseries\sffamily TODO} Ordre d'un element, grup ciclic}
-\label{sec:org267a00f}
-\section{{\bfseries\sffamily TODO} Morfismes de grups}
-\label{sec:org03a7a39}
+\label{sec:orga30edb4}
+\section{Elements d'un grup}
+\label{sec:orgcbc6cf2}
+\subsection{Definicio Centre}
+\label{sec:org6269bfc}
+Sigui G un grup, llavors el Centre G es \(\mathcal{Z}(G) = \{ a \in G \mid aba^{-1} = b \quad \forall b \in G \} = \{ a \in G \mid ab = ba \quad \forall b \in G \}\).
 
+\subsection{Definicio Centralitzador}
+\label{sec:org4535fbc}
+Sigui G un grup, i H un subgrup de G llavors el Centralitzador de H en G es \(\mathcal{Z}_{G}(H) = \{ a \in G \mid aba^{-1} = b \quad \forall b \in H \} = \{ a \in G \mid ab = ba \quad \forall b \in H \}\).
+
+\subsection{Definicio Normalitzador}
+\label{sec:org12ec9e5}
+Sigui G un grup, i H un subgrup de G, llavors el normalitzador de H en G es N\(_{\text{G}}\)(H) = \(\{ a \in G \mid aHa^{-1} = H \} = \{ a \in G \mid aH = Ha \}\).
+
+\subsubsection{Observacio:}
+\label{sec:org177e8fd}
+Normalitzador de H en G = G \(\iff H \vartriangleleft G\)
+\section{{\bfseries\sffamily TODO} Ordre d'un element, grup ciclic}
+\label{sec:org449815d}
+\section{{\bfseries\sffamily TODO} Morfismes de grups}
+\label{sec:org846f1b7}
 \section{Classes laterals}
-\label{sec:orgef4e261}
+\label{sec:org2fbcab7}
 \subsection{Definicio}
-\label{sec:org291f375}
+\label{sec:orgcc3b064}
 Sigui G un grup i H in subgrup de G. \(a,b \in G\). \\
 Definim \(a \sim b (esquerra) \iff a^{-1}b \in H\)
 \subsection{Definicio de la classe d'equivalencia}
-\label{sec:org1f64874}
+\label{sec:orgc10715b}
 \(\bar{a}\) := \{ \(b \in G\) | \(a \sim b\)\} \\
 \(aH\) := \{ \(ax\) | \(x \in H\)\} \\
 Observem que aH = \(\bar{a}\) \\
 A més H i aH tenen el mateix cardinal.
 
 \subsection{Definicio Classe Lateral:}
-\label{sec:org8d6b397}
+\label{sec:orgc30bfcb}
 Anomenem \(G/H = \{aH | a \in G\}\) el conjunt de les classes laterals per l'esquerra (conjunt quocient). \\
 Diem també que l'índex de H en G es \([G:H] = |G/H|\) = nombre d' elements de G modul H
 
 \subsubsection{Observacio:}
-\label{sec:orgeb17027}
+\label{sec:org3d2bafe}
 \begin{enumerate}
 \item El nombre de classes laterals per l'esquerra es el mateix que el nombre de classes laterals per la dreta.
 \item L'índex és multiplicatiu. K \(\subset\) H \(\subset\) G. Llavors [G:K] = [G:H] * [H:K]
 \end{enumerate}
 
 \subsection{Teorema de Lagrange}
-\label{sec:orgc82c73d}
+\label{sec:orgd16bbc7}
 Sigui G un grup i H un subgrup, G finit. \\
 Aleshores \(|G| = |G/H| * |H| \iff |G/H| = \frac{|G|}{|H|}\), i a més |H| divideix |G|.
 
 \subsubsection{{\bfseries\sffamily TODO} Demo}
-\label{sec:org01f10b5}
+\label{sec:orgaede8b8}
 
 \section{Subgrup normal, Grup quocient}
-\label{sec:orgfef0244}
+\label{sec:orgf22384b}
 \subsection{Definicio: Subgrup Normal}
-\label{sec:org27bc38b}
+\label{sec:orge0358a5}
 Sigui G un grup, H un subgrup de G. H és subgrup normal de G si aH = Ha \(\forall\) a \(\in\) G.
 \subsection{Lema}
-\label{sec:orga570542}
+\label{sec:org67c9a87}
 f: \(G_1 \to G_2\) morfime de grups. Aleshores,
 \begin{enumerate}
 \item Si \(H_1 \vartriangleleft G1 \implies f(H_1) \vartriangleleft f(G_1)\).
 \item Si \(H_2 \vartriangleleft G2 \implies f^{-1}(H_2) \vartriangleleft G_1\).
 \end{enumerate}
 \subsubsection{{\bfseries\sffamily TODO} Demo}
-\label{sec:org01ea247}
+\label{sec:orgc24a234}
 \subsection{Observacio}
-\label{sec:org45bdedb}
+\label{sec:org0c1a17b}
 \(H \subseteq K \subseteq G\), H,K subgrups de G. Aleshores. \\
 Si \(H \vartriangleleft G \implies H \vartriangleleft K\). El reciproc es fals.
 \subsection{Observacio}
-\label{sec:org18f28eb}
+\label{sec:orgcd1aadc}
 si \(H \vartriangleleft G\), aleshores (aH)*(bH) = (ab)H
 \subsection{Definicio: Operacio interna}
-\label{sec:org650e7ae}
+\label{sec:org789dd96}
 Sigui \(H \vartriangleleft G\) i sigui G/H = \{aH | a \(\in\) G\} el conjunt de classes laterals per l'esquerra modul H. En G/H definim l'operacio interna:
 \begin{alignat*}{5}
 G/H &\times G/H &\to&\hspace{2pt}  G/H & \\
 aH &\times bH &\mapsto&  (ab)H &
 \end{alignat*}
 \subsection{Corol.lari}
-\label{sec:orgc83a52a}
+\label{sec:org2e043cb}
 \(G/H\) es un grup i s'anomena el grup quocient de G per H.
 \subsection{Exercici: La aplicacio quocient es un morfisme}
-\label{sec:org4082f08}
+\label{sec:org184de6a}
 
 \section{Primer teorema d'isomorfisme}
-\label{sec:org244d396}
+\label{sec:org49da3d5}
 
 \subsection{{\bfseries\sffamily TODO} Teorema:}
-\label{sec:orgce2857f}
+\label{sec:org07c0ff9}
 Sigui \(f: G_1 \to G_2\) morfisme de grups, Sigui \(H \vartriangleleft G_1\), i sigui l'aplicació
 
 \begin{alignat*}{2}
@@ -122,34 +139,34 @@ aH &\mapsto \tilde{f}(aH) := f(a)
 \begin{figure}[htbp]
 \centering
 \includegraphics[width=.9\linewidth]{./images/primeriso.jpg}
-\caption{\label{fig:org93aa0a9}
+\caption{\label{fig:orgc3f0ad9}
 Primer teorema d'isomorfisme}
 \end{figure}
 
 \section{El grup multiplicatiu d'un cos finit}
-\label{sec:org99ee81a}
+\label{sec:org681cd85}
 
 \subsection{Definicio}
-\label{sec:orga2e033c}
+\label{sec:org906f6eb}
 Sigui \(\mathbb{K}\) un cos. El grup multiplicatiu de \(\mathbb{K}\) és \\
 \begin{equation*}
 \mathbb{K}^* = \mathbb{K} \setminus \{0\} = \{x \in \mathbb{K} \mid x \neq 0\}
 \end{equation*}
 
 \subsection{Teorema}
-\label{sec:orga12f918}
+\label{sec:orgb21f7fd}
 Sigui \(\mathbb{K}\) un cos. Sigui G un subgrup finit de \(\mathbb{K}^*\). Aleshores G és cíclic
 
 \subsubsection{{\bfseries\sffamily TODO} demo}
-\label{sec:org953cc86}
+\label{sec:org225d814}
 
 \section{Grup simples}
-\label{sec:orgb5ea09b}
+\label{sec:org84ea34e}
 \subsection{Definicio}
-\label{sec:orgc85ae6c}
+\label{sec:org7527873}
 Sigui G un grup no trivial. Direm que G es simple si els unics subgrups normals de G son \{1\} i G.
 \subsection{Proposicio}
-\label{sec:org3a2459f}
+\label{sec:org46ba54a}
 Sigui G un grup no trivial. Son equivalents
 \begin{enumerate}
 \item G es simple i abelia
@@ -158,27 +175,27 @@ Sigui G un grup no trivial. Son equivalents
 \end{enumerate}
 
 \subsubsection{{\bfseries\sffamily TODO} Demo}
-\label{sec:org8baf1a8}
-\subsection{Teorema de Feit-Thompspn}
-\label{sec:orgfa76628}
+\label{sec:org7b9adb5}
+\subsection{Teorema de Feit-Thompson}
+\label{sec:orgfc0cf06}
 Sigui G grup simple, Suposem |G| es senar. Aleshores G es ciclic i \(G \cong \mathbb{Z}/p\mathbb{Z}\).
 \subsection{Teorema}
-\label{sec:org076f5ea}
+\label{sec:orgd0998e6}
 Sigui n \(\geq\) 5, Aleshores \(\mathcal{A}_n\) es simple
 \subsubsection{{\bfseries\sffamily TODO} Demo}
-\label{sec:org0c6d124}
+\label{sec:org4f5d1fa}
 \subsection{Proposicio}
-\label{sec:org8d22086}
+\label{sec:orge768223}
     Sigui G un grup, \(H \vartriangleleft G\). Aleshores,\\
 G/H es grup simple \(\iff\) H es un element maximal en el conjunt \{K | \(K \vartriangleleft G\), \(K \neq G\)\}
 \subsubsection{{\bfseries\sffamily TODO} Demo}
-\label{sec:orgf6983d9}
+\label{sec:orge5a1cd4}
 
 \section{Grup resolubles}
-\label{sec:org8c544cf}
+\label{sec:org7b1e72a}
 
 \subsection{Definicio torre normal}
-\label{sec:orgdb17b2c}
+\label{sec:orgfa53c2f}
 Una torre normal de G es \(G = G_0 \vartriangleright G_1 \vartriangleright G_2 \vartriangleright \ldots \vartriangleright G_n = \{1\}\) on G es un grup i \(G_i \vartriangleleft G_{i+1}\). \\
 Anomenem n la \emph{longitud de la torre} \\
 \(G_{i-1}/G_i\) s'anomenen els \emph{quocients de la torre} \\
@@ -190,11 +207,11 @@ A mes definim:
 \end{itemize}
 
 \subsection{Definicio Grup Resoluble}
-\label{sec:org553b19d}
+\label{sec:orgb0a547c}
 Direm que G es resoluble si te una torre normal abeliana.
 
 \subsection{Teorema: Segon Teorema d'isomorfisme}
-\label{sec:org81ca656}
+\label{sec:org7a8958a}
 Sigui G grup i H,K dos subgrups de G. Suposem \(H \vartriangleleft G\). Aleshores:
 \begin{enumerate}
 \item \(H \cap K \vartriangleleft K\)
@@ -204,10 +221,10 @@ Sigui G grup i H,K dos subgrups de G. Suposem \(H \vartriangleleft G\). Aleshore
 \end{enumerate}
 
 \subsubsection{{\bfseries\sffamily TODO} Demo}
-\label{sec:org959dffc}
+\label{sec:org52a13a8}
 
 \subsection{Teorema: Jordan-Holder}
-\label{sec:org85b1248}
+\label{sec:org6b32ed4}
 \begin{displaymath}
     \text{Sigui G un grup i}
                \left\{\begin{array}{ll}
@@ -221,10 +238,10 @@ G = H_0 \vartriangleright H_1 \vartriangleright H_2 \vartriangleright \ldots \va
 Aleshores n = m, i \(\exists \sigma \in \mathcal{S}_n\) tal que \(\sfrac{H_i}{H_{i+1}} \cong \sfrac{G_{\sigma(i)}}{G_{\sigma(i)+1}}\).
 
 \subsubsection{{\bfseries\sffamily TODO} Demo}
-\label{sec:orgd877252}
+\label{sec:org27b91bc}
 
 \subsection{Proposicio}
-\label{sec:orga5c6a63}
+\label{sec:org645637d}
 Sigui G un grup, H un subgrup de G. Aleshores
 \begin{enumerate}
 \item Si G es resoluble \(\implies\) H es resoluble
@@ -233,9 +250,9 @@ Sigui G un grup, H un subgrup de G. Aleshores
 \end{enumerate}
 
 \section{Accio d'un grup en un conjunt}
-\label{sec:orgf9bbb9b}
+\label{sec:org6c96481}
 \subsection{Definicio: Accio d'un grup en un conjunt}
-\label{sec:orgb00c1c5}
+\label{sec:orge72d85d}
 Sigui G un grup. SIgui X un conjunt. Una accio de G en X es una aplicacio
 \begin{alignat*}{2}
 \varphi : G \times X &\to X \\
@@ -247,50 +264,50 @@ tal que:
 \item \(1 \cdot x = x \hspace{10pt} \forall x \in X\)
 \end{enumerate}
 \subsection{Observacio}
-\label{sec:orgecb97fe}
+\label{sec:org45ea255}
 Hi ha una bijeccio entre \\
 \{\(\varphi: G \times X \to X \mid \varphi \text{ accio de G en X}\)\} \(\leftrightarrow\) \{\(\phi: G \to Perm(X) \mid \phi \text{ morfisme de grups}\)\}
 \subsection{Definicio: Orbita d'un element}
-\label{sec:orgc82e410}
+\label{sec:org3354c79}
 L'orbita de \(x \in X\) es el subconjunt \(G \cdot x = \{ax \mid a \in G \} \subseteq X\)
 \subsection{Definicio: L'estabilitzador/grup d'isotropia d'x \(\in\) X}
-\label{sec:org3febc0f}
+\label{sec:org8a079f8}
 Gx := \{\(a \in G \mid ax = x \} \subseteq G\), es un subgrup de G.
 \subsection{Lema:}
-\label{sec:org0f6a74d}
+\label{sec:org640ff7e}
 Si x,y estan en la mateixa orbita, els seus estabilitzadors son conjugats. \\
 Concretament, si y = ax \(\implies G_y = aG_{x}a^{-1}\)
 \subsubsection{{\bfseries\sffamily TODO} DEMO}
-\label{sec:org0b19f0b}
+\label{sec:org0682b28}
 
 \subsection{Proposicio}
-\label{sec:orga38ccb3}
-L'aplicacio 
+\label{sec:orgd060727}
+L'aplicacio
 \begin{alignat*}{3}
 G \cdot x &\to \sfrac{G}{G_x}& \\
 ax &\mapsto a\cdot G_x&
 \end{alignat*}
 esta ben definida i es bijectiva. En particular, \\
 \begin{enumerate}
-\item \(\vert G \cdot x \vert = \vert \sfrac{G}{G_x}\vert = [G:G_x]\)
-\item Si G es finit, \(\vert G \cdot x \vert \text{ divideix } \vert G \vert\)
-\item Si X es finit, \(\vert X \vert = \sum_{i=1}^{n} \vert G \cdot x_i \vert = \sum_{i=1}^n [G:G_{x_i}]\)
+\item \(\lvert G \cdot x \rvert = \lvert \sfrac{G}{G_x} \rvert = [G:G_x]\)
+\item Si G es finit, \(\lvert G \cdot x \rvert \big{|} \lvert G \rvert\)
+\item Si X es finit, \(\lvert X \rvert = \sum_{i=1}^{n} \lvert G \cdot x_i \rvert = \sum_{i=1}^n [G:G_{x_i}]\)
 \end{enumerate}
 \subsubsection{{\bfseries\sffamily TODO} DEMO}
-\label{sec:org2c9edef}
+\label{sec:org0a3fea7}
 
 \subsection{Definicio: punt fix}
-\label{sec:orgebce142}
+\label{sec:orgc94a7ae}
 \(x \in X\) es un punt fix per l'accio si ax = x \(\forall a \in G\). En particular\\
 \(G \cdot x = \{ax \mid a \in G\} = \{x\}\), \(G_x = \{ a \in G \mid ax = x \} = G\)
 
 \subsection{Definicio: Accio Transitiva}
-\label{sec:orgcf52ffb}
+\label{sec:org8bfd57c}
 \(G \times X \to X\) es accio transitiva si \(\forall\) x,y \(\in\) X, \(\exists\) a \(\in\) G \text{ tal que } y = ax. \\
 En aquest cas. G \(\cdot\) y = X \(\forall\) \quad y \(\in\) X.
 
 \subsection{Definicio: Accio Fidel}
-\label{sec:org55c0ca4}
+\label{sec:org6174f91}
 \(G \times X \to X\) es accio fidel si \(\forall\) a \(\neq\) b, a,b \(\in\) G. Aleshores m\(_{\text{a}}\) \(\neq\) m\(_{\text{b}}\), on
 \begin{alignat*}{3}
 m_a: &X &\to X \\
@@ -299,44 +316,43 @@ m_a: &X &\to X \\
 m\(_{\text{a}}\) \(\in\) Perm(x)
 
 \subsubsection{Observacio:}
-\label{sec:orgab1b845}
+\label{sec:org583e20a}
 Si be \(G \times X \to X \cong m: G \to Perm(x)\) es morfisme de grups, si imposem que es fidel, el morfisme es injectiu. A mes si X es finit l'accio es isomorf a un subgrup del grup simetric.
 
 \subsection{Accio per translacio en X, quan X = G}
-\label{sec:orge6d9d26}
+\label{sec:org8898629}
 Sigui G un grup, definim
 \begin{alignat*}{4}
 &G \times &G &\to G \\
 &a &x &\mapsto a \cdot x = ax
 \end{alignat*}
-I es efectivament una accio. 
+I es efectivament una accio.
 \subsection{Teorema de Cayley}
-\label{sec:org91dd616}
+\label{sec:orgb9211c4}
 Sigui G un grup finit, n = |G|. Aleshores G es isomorf a un subgrup del grup simetric \(\mathcal{S}_n\)
 \subsubsection{{\bfseries\sffamily TODO} Demo}
-\label{sec:org2123c85}
+\label{sec:orge47e333}
 
 
 \subsection{Definicio: Accio per conjugacio de G en X = G}
-\label{sec:orgc0a3019}
+\label{sec:orgee64f62}
 \begin{alignat*}{4}
-\label{eq:org26be6c1}
 &G \times &G &\to G \\
 &a &x &\mapsto a \cdot x = axa^{-1}
 \end{alignat*}
 
-\subsubsection{Proposicio:}
-\label{sec:orgc06909c}
+\subsubsection{Centre}
+\label{sec:orgb863b24}
 
 \(x \in G \text{ es punt fix } \iff a \cdot x = x \quad \forall a \in G \iff axa^{-1} = x \forall a \in G \iff ax = xa \quad \forall a \in G \iff x \in \mathcal{Z}(G) = \{ x \in G \mid ax = xa \quad \forall a \in G \} = \text{ centre de G}\). El centre de G es subgrup.
 
-\subsubsection{Proposicio:}
-\label{sec:orgbf426f0}
+\subsubsection{Centralitzador}
+\label{sec:orgd04fc07}
 L'estabilitzador de y \(\in\) G es \(G_y = \{a \in G \mid a \cdot y = y \} = \{ a \in G \mid aya^{-1} = y \} = \{ a \in G \mid ay = ya \} = \mathcal{Z}_{G}(y)\),  centralitzador de G. El centralitzador tambe es un subgrup de G.
 
 \subsection{Definicio: Accio per translacio en les classes laterals}
-\label{sec:orgcebfe8d}
-Sigui G grup, H subgrup de G i X = \(\sfrac{G}{H}\) = \{ aH \mid a \(\in\) G\}
+\label{sec:org9073a18}
+Sigui G grup, H subgrup de G i X = \(\sfrac{G}{H} = \{ aH \mid a \in G\}\)
 \begin{alignat*}{4}
 &G \times &\sfrac{G}{H} &\to \sfrac{G}{H} \\
 &a &bH &\mapsto abH
@@ -349,36 +365,44 @@ Sigui G grup, H subgrup de G i X = \(\sfrac{G}{H}\) = \{ aH \mid a \(\in\) G\}
 
 
 \subsection{Definicio: Accio per conjugacio en els subgrups}
-\label{sec:org479222d}
+\label{sec:org651f011}
 Sigui G grup i \(X = \{ H \mid \text{ H subgrup de G} \}.\)
 \begin{alignat*}{4}
-&G \times &\text{\{sg. de yG\}} &\to \text{\{sg. de G\}, conjugat de H} \\
+&G \times &\text{\{sg. de G\}} &\to \text{\{sg. de G\}, conjugat de H} \\
 &a &H &\mapsto aHa^{-1}
 \end{alignat*}
+
 Si H es subgrup de G, l'orbita d'H es: \\
-\(G\cdot H =\{a \cdot H\mid a\in G \} = \{aHa^{-1} \mid a \in G \} \text{: els conjugats de H}\) \\
-H es punt fix per l'accio si \(a\dotH = H \iff aHa^{-1} = H \quad \forall a \in G \iff \text{H es subgrup normal de G}\) 
-L'estabilitzador de H es: \(G_H = \{a \in G \mid a \cdot H\} = \{ a \in \G \mid aHa^{-1} = H \} = N_{G}(H)\): Normalitzador de H en G\\
-Sabem que \(\vert G \cdot H\vert = [G : G_H ].\) Per tant. \\
-\(H \vartriangleleft G \iff \text{H es punt fix per l'accio} \iff \text{L'orbita de H te un sol punt } \iff \vert G \cdot H \vert = 1 \iff [ G : G_H] = 1 \iff G_H = G \iff N_{G}(H) = G\) 
+\(G\cdot H =\{a \cdot H\mid a\in G \} = \{aHa^{-1} \mid a \in G \} \text{: els conjugats de H}\)
+
+
+H es punt fix per l'accio si \(a \cdot H = H \iff aHa^{-1} = H \quad \forall a \in G \iff \text{H es subgrup normal de G}\)
+
+
+L'estabilitzador de H es: \(G_H = \{a \in G \mid a \cdot H = H \} = \{ a \in G \mid aHa^{-1} = H \} = N_{G}(H)\): Normalitzador de H en G
+
+
+Sabem que \(\lvert G \cdot H\rvert = [G : G_H ].\) Per tant. \\
+\(H \vartriangleleft G \iff \text{H es punt fix per l'accio} \iff \text{L'orbita de H te un sol punt } \iff \lvert G \cdot H \rvert = 1 \iff [G : G_H] = 1 \iff G_H = G \iff N_{G}(H) = G\)
 
 \subsection{Teorema de Cauchy}
-\label{sec:org3b809a2}
+\label{sec:org027a432}
 Sigui G un grup finit, |G| = n. Sigui p primer tal que p|n. \\
 ALeshores, \(\exists\) x \(\in\) G tal que ord(x) = p
 
 \subsubsection{{\bfseries\sffamily TODO} Demo}
-\label{sec:orgd774f9b}
+\label{sec:org5c02ff5}
 
 \section{Subgrups de Sylow}
-\label{sec:org45b6535}
+\label{sec:org76ea794}
 
 \subsection{Definicio: p-grups: Subgrups de Sylow}
-\label{sec:org66e33cb}
-Sigui G un grup i p un nombre primer. Aleshores,  G es un p-grup \iff \(\vert{}\) G \(\vert{}\) = p\(^{\text{r}}\) per a algun r \(\ge\) 0.
+\label{sec:org893e0e8}
+Sigui G un grup i p un nombre primer. Aleshores,  G es un p-grup
+\(\iff \lvert G \rvert = p^r\) per a algun r \(\ge\) 0.
 
 \subsection{Teorema:}
-\label{sec:org05b9428}
+\label{sec:org7b0f416}
 Sigui G un p-grup. Aleshores, |G| = p\(^{\text{r}}\), r \(\ge\) 0, i:
 \begin{enumerate}
 \item G no trivial \(\iff \mathcal{Z}(G)\) no trivial.
@@ -386,6 +410,43 @@ Sigui G un p-grup. Aleshores, |G| = p\(^{\text{r}}\), r \(\ge\) 0, i:
 \item si G es simple, aleshores G \(\cong \sfrac{\mathbb{Z}}{p\mathbb{Z}}\)
 \end{enumerate}
 
+
+\subsubsection{{\bfseries\sffamily TODO} demo}
+\label{sec:orgef124d1}
+
 \section{Teoremas de Sylow}
-\label{sec:org183d4f5}
+\label{sec:org0fd306b}
+
+\subsection{Teorema: Primer Teorema de Sylow}
+\label{sec:org25c5617}
+Sigui G un grup finit i considerem p primer, r \(\ge\) 0. \\
+Aleshores, si \(p^r \big{|} \lvert G \rvert \implies G \text{ conte un subgrup d'ordre } p^r\)
+
+\subsection{Definicio}
+\label{sec:org333f8e5}
+Sigui G grup finit, \(\lvert G \rvert = p^r \cdot m\), p primer, r \(\ge\) 0, p \(\nmid\) m.\\
+Denotem S\(_{\text{y}}\)l\(_{\text{p}}\)(G) = \(\{ H \mid \text{H subgrup de G, } \lvert H \rvert = p^r \}\). \\
+Els anomenem els p-subgrups de Sylow de G (p-Sylow de G) i denotem n\(_{\text{p}}\)(G) = cardinal de S\(_{\text{y}}\)l\(_{\text{p}}\)(G).
+
+\subsubsection{Observacio:}
+\label{sec:orgb498521}
+\begin{enumerate}
+\item El conjugat d'un p-Sylow es un p-Sylow ja que \(\lvert H \rvert = \lvert aHa^{-1} \rvert\).
+\item Els P-subgrups son  \(\{ H \mid \text{H subgrup de G, } \lvert H \rvert = p^s, s \leq r \}\).
+\end{enumerate}
+
+
+\subsection{Teorema: Segon Teorema de Sylow}
+\label{sec:orgdc80b2e}
+Sigui G grup finit, \(\lvert G \rvert = p^r \cdot m\), p primer, r \(\ge\) 0, p \(\nmid\) m.\\
+
+\begin{enumerate}
+\item Si L es un p-subgrup de G ( \(\lvert L \rvert = p^s, s \leq r\) ). Aleshores \(\exists H \in S_{y}l_{p}(G) \text{ tal que } L \subseteq H\)
+\item Si H i P son dos p-Sylow de G. Aleshores \(\exists a \in G \text{ tal que } aHa^{-1} = P.\), Es a dir, tots els p-Sylow son conjugats.
+\item n\(_{\text{p}}\)(G) \(\equiv\) 1 (mod p) i n\(_{\text{p}}\)(G)|m.
+\end{enumerate}
+
+
+\subsubsection{{\bfseries\sffamily TODO} Demo}
+\label{sec:orgb06f10b}
 \end{document}

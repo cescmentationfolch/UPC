@@ -1,0 +1,81 @@
+\BOOKMARK [1][-]{section.1}{TODO Grup}{}% 1
+\BOOKMARK [1][-]{section.2}{TODO Interseccio, unio, producte i generacio}{}% 2
+\BOOKMARK [1][-]{section.3}{Elements d'un grup}{}% 3
+\BOOKMARK [2][-]{subsection.3.1}{Definicio Centre}{section.3}% 4
+\BOOKMARK [2][-]{subsection.3.2}{Definicio Centralitzador}{section.3}% 5
+\BOOKMARK [2][-]{subsection.3.3}{Definicio Normalitzador}{section.3}% 6
+\BOOKMARK [3][-]{subsubsection.3.3.1}{Observacio:}{subsection.3.3}% 7
+\BOOKMARK [1][-]{section.4}{TODO Ordre d'un element, grup ciclic}{}% 8
+\BOOKMARK [1][-]{section.5}{TODO Morfismes de grups}{}% 9
+\BOOKMARK [1][-]{section.6}{Classes laterals}{}% 10
+\BOOKMARK [2][-]{subsection.6.1}{Definicio}{section.6}% 11
+\BOOKMARK [2][-]{subsection.6.2}{Definicio de la classe d'equivalencia}{section.6}% 12
+\BOOKMARK [2][-]{subsection.6.3}{Definicio Classe Lateral:}{section.6}% 13
+\BOOKMARK [3][-]{subsubsection.6.3.1}{Observacio:}{subsection.6.3}% 14
+\BOOKMARK [2][-]{subsection.6.4}{Teorema de Lagrange}{section.6}% 15
+\BOOKMARK [3][-]{subsubsection.6.4.1}{TODO Demo}{subsection.6.4}% 16
+\BOOKMARK [1][-]{section.7}{Subgrup normal, Grup quocient}{}% 17
+\BOOKMARK [2][-]{subsection.7.1}{Definicio: Subgrup Normal}{section.7}% 18
+\BOOKMARK [2][-]{subsection.7.2}{Lema}{section.7}% 19
+\BOOKMARK [3][-]{subsubsection.7.2.1}{TODO Demo}{subsection.7.2}% 20
+\BOOKMARK [2][-]{subsection.7.3}{Observacio}{section.7}% 21
+\BOOKMARK [2][-]{subsection.7.4}{Observacio}{section.7}% 22
+\BOOKMARK [2][-]{subsection.7.5}{Definicio: Operacio interna}{section.7}% 23
+\BOOKMARK [2][-]{subsection.7.6}{Corol.lari}{section.7}% 24
+\BOOKMARK [2][-]{subsection.7.7}{Exercici: La aplicacio quocient es un morfisme}{section.7}% 25
+\BOOKMARK [1][-]{section.8}{Primer teorema d'isomorfisme}{}% 26
+\BOOKMARK [2][-]{subsection.8.1}{TODO Teorema:}{section.8}% 27
+\BOOKMARK [1][-]{section.9}{El grup multiplicatiu d'un cos finit}{}% 28
+\BOOKMARK [2][-]{subsection.9.1}{Definicio}{section.9}% 29
+\BOOKMARK [2][-]{subsection.9.2}{Teorema}{section.9}% 30
+\BOOKMARK [3][-]{subsubsection.9.2.1}{TODO demo}{subsection.9.2}% 31
+\BOOKMARK [1][-]{section.10}{Grup simples}{}% 32
+\BOOKMARK [2][-]{subsection.10.1}{Definicio}{section.10}% 33
+\BOOKMARK [2][-]{subsection.10.2}{Proposicio}{section.10}% 34
+\BOOKMARK [3][-]{subsubsection.10.2.1}{TODO Demo}{subsection.10.2}% 35
+\BOOKMARK [2][-]{subsection.10.3}{Teorema de Feit-Thompson}{section.10}% 36
+\BOOKMARK [2][-]{subsection.10.4}{Teorema}{section.10}% 37
+\BOOKMARK [3][-]{subsubsection.10.4.1}{TODO Demo}{subsection.10.4}% 38
+\BOOKMARK [2][-]{subsection.10.5}{Proposicio}{section.10}% 39
+\BOOKMARK [3][-]{subsubsection.10.5.1}{TODO Demo}{subsection.10.5}% 40
+\BOOKMARK [1][-]{section.11}{Grup resolubles}{}% 41
+\BOOKMARK [2][-]{subsection.11.1}{Definicio torre normal}{section.11}% 42
+\BOOKMARK [2][-]{subsection.11.2}{Definicio Grup Resoluble}{section.11}% 43
+\BOOKMARK [2][-]{subsection.11.3}{Teorema: Segon Teorema d'isomorfisme}{section.11}% 44
+\BOOKMARK [3][-]{subsubsection.11.3.1}{TODO Demo}{subsection.11.3}% 45
+\BOOKMARK [2][-]{subsection.11.4}{Teorema: Jordan-Holder}{section.11}% 46
+\BOOKMARK [3][-]{subsubsection.11.4.1}{TODO Demo}{subsection.11.4}% 47
+\BOOKMARK [2][-]{subsection.11.5}{Proposicio}{section.11}% 48
+\BOOKMARK [1][-]{section.12}{Accio d'un grup en un conjunt}{}% 49
+\BOOKMARK [2][-]{subsection.12.1}{Definicio: Accio d'un grup en un conjunt}{section.12}% 50
+\BOOKMARK [2][-]{subsection.12.2}{Observacio}{section.12}% 51
+\BOOKMARK [2][-]{subsection.12.3}{Definicio: Orbita d'un element}{section.12}% 52
+\BOOKMARK [2][-]{subsection.12.4}{Definicio: L'estabilitzador/grup d'isotropia d'x \040X}{section.12}% 53
+\BOOKMARK [2][-]{subsection.12.5}{Lema:}{section.12}% 54
+\BOOKMARK [3][-]{subsubsection.12.5.1}{TODO DEMO}{subsection.12.5}% 55
+\BOOKMARK [2][-]{subsection.12.6}{Proposicio}{section.12}% 56
+\BOOKMARK [3][-]{subsubsection.12.6.1}{TODO DEMO}{subsection.12.6}% 57
+\BOOKMARK [2][-]{subsection.12.7}{Definicio: punt fix}{section.12}% 58
+\BOOKMARK [2][-]{subsection.12.8}{Definicio: Accio Transitiva}{section.12}% 59
+\BOOKMARK [2][-]{subsection.12.9}{Definicio: Accio Fidel}{section.12}% 60
+\BOOKMARK [3][-]{subsubsection.12.9.1}{Observacio:}{subsection.12.9}% 61
+\BOOKMARK [2][-]{subsection.12.10}{Accio per translacio en X, quan X = G}{section.12}% 62
+\BOOKMARK [2][-]{subsection.12.11}{Teorema de Cayley}{section.12}% 63
+\BOOKMARK [3][-]{subsubsection.12.11.1}{TODO Demo}{subsection.12.11}% 64
+\BOOKMARK [2][-]{subsection.12.12}{Definicio: Accio per conjugacio de G en X = G}{section.12}% 65
+\BOOKMARK [3][-]{subsubsection.12.12.1}{Centre}{subsection.12.12}% 66
+\BOOKMARK [3][-]{subsubsection.12.12.2}{Centralitzador}{subsection.12.12}% 67
+\BOOKMARK [2][-]{subsection.12.13}{Definicio: Accio per translacio en les classes laterals}{section.12}% 68
+\BOOKMARK [2][-]{subsection.12.14}{Definicio: Accio per conjugacio en els subgrups}{section.12}% 69
+\BOOKMARK [2][-]{subsection.12.15}{Teorema de Cauchy}{section.12}% 70
+\BOOKMARK [3][-]{subsubsection.12.15.1}{TODO Demo}{subsection.12.15}% 71
+\BOOKMARK [1][-]{section.13}{Subgrups de Sylow}{}% 72
+\BOOKMARK [2][-]{subsection.13.1}{Definicio: p-grups: Subgrups de Sylow}{section.13}% 73
+\BOOKMARK [2][-]{subsection.13.2}{Teorema:}{section.13}% 74
+\BOOKMARK [3][-]{subsubsection.13.2.1}{TODO demo}{subsection.13.2}% 75
+\BOOKMARK [1][-]{section.14}{Teoremas de Sylow}{}% 76
+\BOOKMARK [2][-]{subsection.14.1}{Teorema: Primer Teorema de Sylow}{section.14}% 77
+\BOOKMARK [2][-]{subsection.14.2}{Definicio}{section.14}% 78
+\BOOKMARK [3][-]{subsubsection.14.2.1}{Observacio:}{subsection.14.2}% 79
+\BOOKMARK [2][-]{subsection.14.3}{Teorema: Segon Teorema de Sylow}{section.14}% 80
+\BOOKMARK [3][-]{subsubsection.14.3.1}{TODO Demo}{subsection.14.3}% 81

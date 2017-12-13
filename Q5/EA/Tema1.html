@@ -1,0 +1,1013 @@
+<!doctype html>
+<html lang="en">
+<head>
+<title>Estructures Algebraiques: Tema 1</title>
+<!-- 2017-12-11 lun 17:16 -->
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="generator" content="Org-mode">
+<meta name="author" content="Dean">
+
+<link  href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.5/css/bootstrap.min.css" rel="stylesheet">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.5/js/bootstrap.min.js"></script>
+<style type="text/css">
+/* org mode styles on top of twbs */
+
+html {
+    position: relative;
+    min-height: 100%;
+}
+
+body {
+    font-size: 18px;
+    margin-bottom: 105px;
+}
+
+footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 101px;
+    background-color: #f5f5f5;
+}
+
+footer > div {
+    padding: 10px;
+}
+
+footer p {
+    margin: 0 0 5px;
+    text-align: center;
+    font-size: 16px;
+}
+
+#table-of-contents {
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+blockquote p {
+    font-size: 18px;
+}
+
+pre {
+    font-size: 16px;
+}
+
+.footpara {
+    display: inline-block;
+}
+
+figcaption {
+  font-size: 16px;
+  color: #666;
+  font-style: italic;
+  padding-bottom: 15px;
+}
+
+/* from twbs docs */
+
+.bs-docs-sidebar.affix {
+    position: static;
+}
+@media (min-width: 768px) {
+    .bs-docs-sidebar {
+        padding-left: 20px;
+    }
+}
+
+/* All levels of nav */
+.bs-docs-sidebar .nav > li > a {
+    display: block;
+    padding: 4px 20px;
+    font-size: 14px;
+    font-weight: 500;
+    color: #999;
+}
+.bs-docs-sidebar .nav > li > a:hover,
+.bs-docs-sidebar .nav > li > a:focus {
+    padding-left: 19px;
+    color: #A1283B;
+    text-decoration: none;
+    background-color: transparent;
+    border-left: 1px solid #A1283B;
+}
+.bs-docs-sidebar .nav > .active > a,
+.bs-docs-sidebar .nav > .active:hover > a,
+.bs-docs-sidebar .nav > .active:focus > a {
+    padding-left: 18px;
+    font-weight: bold;
+    color: #A1283B;
+    background-color: transparent;
+    border-left: 2px solid #A1283B;
+}
+
+/* Nav: second level (shown on .active) */
+.bs-docs-sidebar .nav .nav {
+    display: none; /* Hide by default, but at >768px, show it */
+    padding-bottom: 10px;
+}
+.bs-docs-sidebar .nav .nav > li > a {
+    padding-top: 1px;
+    padding-bottom: 1px;
+    padding-left: 30px;
+    font-size: 12px;
+    font-weight: normal;
+}
+.bs-docs-sidebar .nav .nav > li > a:hover,
+.bs-docs-sidebar .nav .nav > li > a:focus {
+    padding-left: 29px;
+}
+.bs-docs-sidebar .nav .nav > .active > a,
+.bs-docs-sidebar .nav .nav > .active:hover > a,
+.bs-docs-sidebar .nav .nav > .active:focus > a {
+    padding-left: 28px;
+    font-weight: 500;
+}
+
+/* Nav: third level (shown on .active) */
+.bs-docs-sidebar .nav .nav .nav {
+    padding-bottom: 10px;
+}
+.bs-docs-sidebar .nav .nav .nav > li > a {
+    padding-top: 1px;
+    padding-bottom: 1px;
+    padding-left: 40px;
+    font-size: 12px;
+    font-weight: normal;
+}
+.bs-docs-sidebar .nav .nav .nav > li > a:hover,
+.bs-docs-sidebar .nav .nav .nav > li > a:focus {
+    padding-left: 39px;
+}
+.bs-docs-sidebar .nav .nav .nav > .active > a,
+.bs-docs-sidebar .nav .nav .nav > .active:hover > a,
+.bs-docs-sidebar .nav .nav .nav > .active:focus > a {
+    padding-left: 38px;
+    font-weight: 500;
+}
+
+/* Show and affix the side nav when space allows it */
+@media (min-width: 992px) {
+    .bs-docs-sidebar .nav > .active > ul {
+        display: block;
+    }
+    /* Widen the fixed sidebar */
+    .bs-docs-sidebar.affix,
+    .bs-docs-sidebar.affix-bottom {
+        width: 213px;
+    }
+    .bs-docs-sidebar.affix {
+        position: fixed; /* Undo the static from mobile first approach */
+        top: 20px;
+    }
+    .bs-docs-sidebar.affix-bottom {
+        position: absolute; /* Undo the static from mobile first approach */
+    }
+    .bs-docs-sidebar.affix .bs-docs-sidenav,.bs-docs-sidebar.affix-bottom .bs-docs-sidenav {
+        margin-top: 0;
+        margin-bottom: 0
+    }
+}
+@media (min-width: 1200px) {
+    /* Widen the fixed sidebar again */
+    .bs-docs-sidebar.affix-bottom,
+    .bs-docs-sidebar.affix {
+        width: 263px;
+    }
+}
+</style>
+<script type="text/javascript">
+$(function() {
+    'use strict';
+
+    $('.bs-docs-sidebar li').first().addClass('active');
+
+    $(document.body).scrollspy({target: '.bs-docs-sidebar'});
+
+    $('.bs-docs-sidebar').affix();
+});
+</script>
+
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+  displayAlign: "center",
+  displayIndent: "2em",
+  messageStyle: "none",
+  "HTML-CSS": {
+    scale: 100,
+    styles: {
+      ".MathJax_Display": {
+        "font-size": "100%"
+      }
+    }
+  },
+  "SVG": {
+    scale: 100,
+    styles: {
+      ".MathJax_SVG_Display": {
+        "font-size": "100%",
+        "margin-left": "-2.281em"
+      }
+    }
+  }
+});
+</script>
+<script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_SVG"></script>
+</head>
+<body>
+<div id="content" class="container">
+<div class="row"><div class="col-md-9"><h1 class="title">Estructures Algebraiques: Tema 1</h1>
+
+<div id="outline-container-sec-1" class="outline-2">
+<h2 id="sec-1"><span class="section-number-2">1</span> <span class="label label-primary TODO">TODO</span> Grup</h2>
+</div>
+<div id="outline-container-sec-2" class="outline-2">
+<h2 id="sec-2"><span class="section-number-2">2</span> <span class="label label-primary TODO">TODO</span> Interseccio, unio, producte i generacio</h2>
+</div>
+<div id="outline-container-sec-3" class="outline-2">
+<h2 id="sec-3"><span class="section-number-2">3</span> <span class="label label-primary TODO">TODO</span> Ordre d'un element, grup ciclic</h2>
+</div>
+<div id="outline-container-sec-4" class="outline-2">
+<h2 id="sec-4"><span class="section-number-2">4</span> <span class="label label-primary TODO">TODO</span> Morfismes de grups</h2>
+</div>
+<div id="outline-container-sec-5" class="outline-2">
+<h2 id="sec-5"><span class="section-number-2">5</span> Classes laterals</h2>
+<div class="outline-text-2" id="text-5">
+</div><div id="outline-container-sec-5-1" class="outline-3">
+<h3 id="sec-5-1"><span class="section-number-3">5.1</span> Definicio</h3>
+<div class="outline-text-3" id="text-5-1">
+<p>
+Sigui G un grup i H in subgrup de G. \(a,b \in G\). <br >
+Definim \(a \sim b (esquerra) \iff a^{-1}b \in H\)
+</p>
+</div>
+</div>
+<div id="outline-container-sec-5-2" class="outline-3">
+<h3 id="sec-5-2"><span class="section-number-3">5.2</span> Definicio de la classe d'equivalencia</h3>
+<div class="outline-text-3" id="text-5-2">
+<p>
+\(\bar{a}\) := { \(b \in G\) | \(a \sim b\)} <br >
+\(aH\) := { \(ax\) | \(x \in H\)} <br >
+Observem que aH = \(\bar{a}\) <br >
+A més H i aH tenen el mateix cardinal.
+</p>
+</div>
+</div>
+
+<div id="outline-container-sec-5-3" class="outline-3">
+<h3 id="sec-5-3"><span class="section-number-3">5.3</span> Definicio Classe Lateral:</h3>
+<div class="outline-text-3" id="text-5-3">
+<p>
+Anomenem \(G/H = \{aH | a \in G\}\) el conjunt de les classes laterals per l'esquerra (conjunt quocient). <br >
+Diem també que l'índex de H en G es \([G:H] = |G/H|\) = nombre d' elements de G modul H
+</p>
+</div>
+
+<div id="outline-container-sec-5-3-1" class="outline-4">
+<h4 id="sec-5-3-1"><span class="section-number-4">5.3.1</span> Observacio:</h4>
+<div class="outline-text-4" id="text-5-3-1">
+<ol class="org-ol">
+<li>El nombre de classes laterals per l'esquerra es el mateix que el nombre de classes laterals per la dreta.
+</li>
+<li>L'índex és multiplicatiu. K &sub; H &sub; G. Llavors [G:K] = [G:H] * [H:K]
+</li>
+</ol>
+</div>
+</div>
+</div>
+
+<div id="outline-container-sec-5-4" class="outline-3">
+<h3 id="sec-5-4"><span class="section-number-3">5.4</span> Teorema de Lagrange</h3>
+<div class="outline-text-3" id="text-5-4">
+<p>
+Sigui G un grup i H un subgrup, G finit. <br >
+Aleshores \(|G| = |G/H| * |H| \iff |G/H| = \frac{|G|}{|H|}\), i a més |H| divideix |G|.
+</p>
+</div>
+
+<div id="outline-container-sec-5-4-1" class="outline-4">
+<h4 id="sec-5-4-1"><span class="section-number-4">5.4.1</span> <span class="label label-primary TODO">TODO</span> Demo</h4>
+</div>
+</div>
+</div>
+
+<div id="outline-container-sec-6" class="outline-2">
+<h2 id="sec-6"><span class="section-number-2">6</span> Subgrup normal, Grup quocient</h2>
+<div class="outline-text-2" id="text-6">
+</div><div id="outline-container-sec-6-1" class="outline-3">
+<h3 id="sec-6-1"><span class="section-number-3">6.1</span> Definicio: Subgrup Normal</h3>
+<div class="outline-text-3" id="text-6-1">
+<p>
+Sigui G un grup, H un subgrup de G. H és subgrup normal de G si aH = Ha &forall; a &isin; G.
+</p>
+</div>
+</div>
+<div id="outline-container-sec-6-2" class="outline-3">
+<h3 id="sec-6-2"><span class="section-number-3">6.2</span> Lema</h3>
+<div class="outline-text-3" id="text-6-2">
+<p>
+f: \(G_1 \to G_2\) morfime de grups. Aleshores,
+</p>
+<ol class="org-ol">
+<li>Si \(H_1 \vartriangleleft G1 \implies f(H_1) \vartriangleleft f(G_1)\).
+</li>
+<li>Si \(H_2 \vartriangleleft G2 \implies f^{-1}(H_2) \vartriangleleft G_1\).
+</li>
+</ol>
+</div>
+<div id="outline-container-sec-6-2-1" class="outline-4">
+<h4 id="sec-6-2-1"><span class="section-number-4">6.2.1</span> <span class="label label-primary TODO">TODO</span> Demo</h4>
+</div>
+</div>
+<div id="outline-container-sec-6-3" class="outline-3">
+<h3 id="sec-6-3"><span class="section-number-3">6.3</span> Observacio</h3>
+<div class="outline-text-3" id="text-6-3">
+<p>
+\(H \subseteq K \subseteq G\), H,K subgrups de G. Aleshores. <br >
+Si \(H \vartriangleleft G \implies H \vartriangleleft K\). El reciproc es fals.
+</p>
+</div>
+</div>
+<div id="outline-container-sec-6-4" class="outline-3">
+<h3 id="sec-6-4"><span class="section-number-3">6.4</span> Observacio</h3>
+<div class="outline-text-3" id="text-6-4">
+<p>
+si \(H \vartriangleleft G\), aleshores (aH)*(bH) = (ab)H
+</p>
+</div>
+</div>
+<div id="outline-container-sec-6-5" class="outline-3">
+<h3 id="sec-6-5"><span class="section-number-3">6.5</span> Definicio: Operacio interna</h3>
+<div class="outline-text-3" id="text-6-5">
+<p>
+Sigui \(H \vartriangleleft G\) i sigui G/H = {aH | a &isin; G} el conjunt de classes laterals per l'esquerra modul H. En G/H definim l'operacio interna:
+</p>
+\begin{alignat*}{5}
+G/H &\times G/H &\to&\hspace{2pt}  G/H & \\
+aH &\times bH &\mapsto&  (ab)H &
+\end{alignat*}
+</div>
+</div>
+<div id="outline-container-sec-6-6" class="outline-3">
+<h3 id="sec-6-6"><span class="section-number-3">6.6</span> Corol.lari</h3>
+<div class="outline-text-3" id="text-6-6">
+<p>
+\(G/H\) es un grup i s'anomena el grup quocient de G per H.
+</p>
+</div>
+</div>
+<div id="outline-container-sec-6-7" class="outline-3">
+<h3 id="sec-6-7"><span class="section-number-3">6.7</span> Exercici: La aplicacio quocient es un morfisme</h3>
+</div>
+</div>
+
+<div id="outline-container-sec-7" class="outline-2">
+<h2 id="sec-7"><span class="section-number-2">7</span> Primer teorema d'isomorfisme</h2>
+<div class="outline-text-2" id="text-7">
+</div><div id="outline-container-sec-7-1" class="outline-3">
+<h3 id="sec-7-1"><span class="section-number-3">7.1</span> <span class="label label-primary TODO">TODO</span> Teorema:</h3>
+<div class="outline-text-3" id="text-7-1">
+<p>
+Sigui \(f: G_1 \to G_2\) morfisme de grups, Sigui \(H \vartriangleleft G_1\), i sigui l'aplicació
+</p>
+
+\begin{alignat*}{2}
+\tilde{f}: G_1/H &\to G_2 \\
+aH &\mapsto \tilde{f}(aH) := f(a)
+\end{alignat*}
+
+<figure id="fig:Hello">
+<p><img src="./images/primeriso.jpg" class="img-responsive" alt="primeriso.jpg">
+</p>
+<figcaption><span class="figure-number">Figure 1:</span> Primer teorema d'isomorfisme</figcaption>
+</figure>
+</div>
+</div>
+</div>
+
+<div id="outline-container-sec-8" class="outline-2">
+<h2 id="sec-8"><span class="section-number-2">8</span> El grup multiplicatiu d'un cos finit</h2>
+<div class="outline-text-2" id="text-8">
+</div><div id="outline-container-sec-8-1" class="outline-3">
+<h3 id="sec-8-1"><span class="section-number-3">8.1</span> Definicio</h3>
+<div class="outline-text-3" id="text-8-1">
+<p>
+Sigui \(\mathbb{K}\) un cos. El grup multiplicatiu de \(\mathbb{K}\) és <br >
+</p>
+\begin{equation*}
+\mathbb{K}^* = \mathbb{K} \setminus \{0\} = \{x \in \mathbb{K} \mid x \neq 0\}
+\end{equation*}
+</div>
+</div>
+
+<div id="outline-container-sec-8-2" class="outline-3">
+<h3 id="sec-8-2"><span class="section-number-3">8.2</span> Teorema</h3>
+<div class="outline-text-3" id="text-8-2">
+<p>
+Sigui \(\mathbb{K}\) un cos. Sigui G un subgrup finit de \(\mathbb{K}^*\). Aleshores G és cíclic
+</p>
+</div>
+
+<div id="outline-container-sec-8-2-1" class="outline-4">
+<h4 id="sec-8-2-1"><span class="section-number-4">8.2.1</span> <span class="label label-primary TODO">TODO</span> demo</h4>
+</div>
+</div>
+</div>
+
+<div id="outline-container-sec-9" class="outline-2">
+<h2 id="sec-9"><span class="section-number-2">9</span> Grup simples</h2>
+<div class="outline-text-2" id="text-9">
+</div><div id="outline-container-sec-9-1" class="outline-3">
+<h3 id="sec-9-1"><span class="section-number-3">9.1</span> Definicio</h3>
+<div class="outline-text-3" id="text-9-1">
+<p>
+Sigui G un grup no trivial. Direm que G es simple si els unics subgrups normals de G son {1} i G.
+</p>
+</div>
+</div>
+<div id="outline-container-sec-9-2" class="outline-3">
+<h3 id="sec-9-2"><span class="section-number-3">9.2</span> Proposicio</h3>
+<div class="outline-text-3" id="text-9-2">
+<p>
+Sigui G un grup no trivial. Son equivalents
+</p>
+<ol class="org-ol">
+<li>G es simple i abelia
+</li>
+<li>|G| = p, on p es primer
+</li>
+<li>\(G \cong \mathbb{Z}/p\mathbb{Z}\)
+</li>
+</ol>
+</div>
+
+<div id="outline-container-sec-9-2-1" class="outline-4">
+<h4 id="sec-9-2-1"><span class="section-number-4">9.2.1</span> <span class="label label-primary TODO">TODO</span> Demo</h4>
+</div>
+</div>
+<div id="outline-container-sec-9-3" class="outline-3">
+<h3 id="sec-9-3"><span class="section-number-3">9.3</span> Teorema de Feit-Thompspn</h3>
+<div class="outline-text-3" id="text-9-3">
+<p>
+Sigui G grup simple, Suposem |G| es senar. Aleshores G es ciclic i \(G \cong \mathbb{Z}/p\mathbb{Z}\).
+</p>
+</div>
+</div>
+<div id="outline-container-sec-9-4" class="outline-3">
+<h3 id="sec-9-4"><span class="section-number-3">9.4</span> Teorema</h3>
+<div class="outline-text-3" id="text-9-4">
+<p>
+Sigui n \(\geq\) 5, Aleshores \(\mathcal{A}_n\) es simple
+</p>
+</div>
+<div id="outline-container-sec-9-4-1" class="outline-4">
+<h4 id="sec-9-4-1"><span class="section-number-4">9.4.1</span> <span class="label label-primary TODO">TODO</span> Demo</h4>
+</div>
+</div>
+<div id="outline-container-sec-9-5" class="outline-3">
+<h3 id="sec-9-5"><span class="section-number-3">9.5</span> Proposicio</h3>
+<div class="outline-text-3" id="text-9-5">
+<p>
+    Sigui G un grup, \(H \vartriangleleft G\). Aleshores,<br >
+G/H es grup simple \(\iff\) H es un element maximal en el conjunt {K | \(K \vartriangleleft G\), \(K \neq G\)}
+</p>
+</div>
+<div id="outline-container-sec-9-5-1" class="outline-4">
+<h4 id="sec-9-5-1"><span class="section-number-4">9.5.1</span> <span class="label label-primary TODO">TODO</span> Demo</h4>
+</div>
+</div>
+</div>
+
+<div id="outline-container-sec-10" class="outline-2">
+<h2 id="sec-10"><span class="section-number-2">10</span> Grup resolubles</h2>
+<div class="outline-text-2" id="text-10">
+</div><div id="outline-container-sec-10-1" class="outline-3">
+<h3 id="sec-10-1"><span class="section-number-3">10.1</span> Definicio torre normal</h3>
+<div class="outline-text-3" id="text-10-1">
+<p>
+Una torre normal de G es \(G = G_0 \vartriangleright G_1 \vartriangleright G_2 \vartriangleright \ldots \vartriangleright G_n = \{1\}\) on G es un grup i \(G_i \vartriangleleft G_{i+1}\). <br >
+Anomenem n la <i>longitud de la torre</i> <br >
+\(G_{i-1}/G_i\) s'anomenen els <i>quocients de la torre</i> <br >
+</p>
+
+<p>
+A mes definim:
+</p>
+<ul class="org-ul">
+<li><b>Torre normal abeliana</b>: Torre normal amb quocients abelians.
+</li>
+<li><b>Torre normal simple/serie de composicio</b>: Torre normal amb quocients abelians
+</li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-sec-10-2" class="outline-3">
+<h3 id="sec-10-2"><span class="section-number-3">10.2</span> Definicio Grup Resoluble</h3>
+<div class="outline-text-3" id="text-10-2">
+<p>
+Direm que G es resoluble si te una torre normal abeliana.
+</p>
+</div>
+</div>
+
+<div id="outline-container-sec-10-3" class="outline-3">
+<h3 id="sec-10-3"><span class="section-number-3">10.3</span> Teorema: Segon Teorema d'isomorfisme</h3>
+<div class="outline-text-3" id="text-10-3">
+<p>
+Sigui G grup i H,K dos subgrups de G. Suposem \(H \vartriangleleft G\). Aleshores:
+</p>
+<ol class="org-ol">
+<li>\(H \cap K \vartriangleleft K\)
+</li>
+<li>\(H \cdot K\) es subgrup de G
+</li>
+<li>\(H \vartriangleleft H \cdot K\)
+</li>
+<li>A mes a mes, \(\sfrac{K}{H \cap K} \cong \sfrac{H \cdot K}{H}\)
+</li>
+</ol>
+</div>
+
+<div id="outline-container-sec-10-3-1" class="outline-4">
+<h4 id="sec-10-3-1"><span class="section-number-4">10.3.1</span> <span class="label label-primary TODO">TODO</span> Demo</h4>
+</div>
+</div>
+
+<div id="outline-container-sec-10-4" class="outline-3">
+<h3 id="sec-10-4"><span class="section-number-3">10.4</span> Teorema: Jordan-Holder</h3>
+<div class="outline-text-3" id="text-10-4">
+\begin{displaymath}
+    \text{Sigui G un grup i}
+               \left\{\begin{array}{ll}
+G = G_0 \vartriangleright G_1 \vartriangleright G_2 \vartriangleright \ldots \vartriangleright G_n = \{1\} \\
+G = H_0 \vartriangleright H_1 \vartriangleright H_2 \vartriangleright \ldots \vartriangleright H_m = \{1\}
+                \end{array}
+\right\rbrace
+              \text{Dues series de composicio de G}
+\end{displaymath}
+
+<p>
+Aleshores n = m, i \(\exists \sigma \in \mathcal{S}_n\) tal que \(\sfrac{H_i}{H_{i+1}} \cong \sfrac{G_{\sigma(i)}}{G_{\sigma(i)+1}}\).
+</p>
+</div>
+
+<div id="outline-container-sec-10-4-1" class="outline-4">
+<h4 id="sec-10-4-1"><span class="section-number-4">10.4.1</span> <span class="label label-primary TODO">TODO</span> Demo</h4>
+</div>
+</div>
+
+<div id="outline-container-sec-10-5" class="outline-3">
+<h3 id="sec-10-5"><span class="section-number-3">10.5</span> Proposicio</h3>
+<div class="outline-text-3" id="text-10-5">
+<p>
+Sigui G un grup, H un subgrup de G. Aleshores
+</p>
+<ol class="org-ol">
+<li>Si G es resoluble \(\implies\) H es resoluble
+</li>
+<li>Si \(H \vartriangleleft G\) i G es resoluble \(\implies \sfrac{G}{H}\) es resoluble
+</li>
+<li>Si \(H \vartriangleleft G\) i H i \(\sfrac{G}{H}\) son resolubles \(\implies\) G es resoluble
+</li>
+</ol>
+</div>
+</div>
+</div>
+
+<div id="outline-container-sec-11" class="outline-2">
+<h2 id="sec-11"><span class="section-number-2">11</span> Accio d'un grup en un conjunt</h2>
+<div class="outline-text-2" id="text-11">
+</div><div id="outline-container-sec-11-1" class="outline-3">
+<h3 id="sec-11-1"><span class="section-number-3">11.1</span> Definicio: Accio d'un grup en un conjunt</h3>
+<div class="outline-text-3" id="text-11-1">
+<p>
+Sigui G un grup. SIgui X un conjunt. Una accio de G en X es una aplicacio
+</p>
+\begin{alignat*}{2}
+\varphi : G \times X &\to X \\
+(a, x) &\mapsto \varphi(a,x) = ax
+\end{alignat*}
+<p>
+tal que:
+</p>
+<ol class="org-ol">
+<li>\(a \cdot (b \cdot x) = (a \cdot b) \cdot x \hspace{10pt}  \forall a,b \in G, \forall x \in X\)
+</li>
+<li>\(1 \cdot x = x \hspace{10pt} \forall x \in X\)
+</li>
+</ol>
+</div>
+</div>
+<div id="outline-container-sec-11-2" class="outline-3">
+<h3 id="sec-11-2"><span class="section-number-3">11.2</span> Observacio</h3>
+<div class="outline-text-3" id="text-11-2">
+<p>
+Hi ha una bijeccio entre <br >
+{\(\varphi: G \times X \to X \mid \varphi \text{ accio de G en X}\)} \(\leftrightarrow\) {\(\phi: G \to Perm(X) \mid \phi \text{ morfisme de grups}\)}
+</p>
+</div>
+</div>
+<div id="outline-container-sec-11-3" class="outline-3">
+<h3 id="sec-11-3"><span class="section-number-3">11.3</span> Definicio: Orbita d'un element</h3>
+<div class="outline-text-3" id="text-11-3">
+<p>
+L'orbita de \(x \in X\) es el subconjunt \(G \cdot x = \{ax \mid a \in G \} \subseteq X\)
+</p>
+</div>
+</div>
+<div id="outline-container-sec-11-4" class="outline-3">
+<h3 id="sec-11-4"><span class="section-number-3">11.4</span> Definicio: L'estabilitzador/grup d'isotropia d'x &isin; X</h3>
+<div class="outline-text-3" id="text-11-4">
+<p>
+Gx := {\(a \in G \mid ax = x \} \subseteq G\), es un subgrup de G.
+</p>
+</div>
+</div>
+<div id="outline-container-sec-11-5" class="outline-3">
+<h3 id="sec-11-5"><span class="section-number-3">11.5</span> Lema:</h3>
+<div class="outline-text-3" id="text-11-5">
+<p>
+Si x,y estan en la mateixa orbita, els seus estabilitzadors son conjugats. <br >
+Concretament, si y = ax \(\implies G_y = aG_{x}a^{-1}\)
+</p>
+</div>
+<div id="outline-container-sec-11-5-1" class="outline-4">
+<h4 id="sec-11-5-1"><span class="section-number-4">11.5.1</span> <span class="label label-primary TODO">TODO</span> DEMO</h4>
+</div>
+</div>
+
+<div id="outline-container-sec-11-6" class="outline-3">
+<h3 id="sec-11-6"><span class="section-number-3">11.6</span> Proposicio</h3>
+<div class="outline-text-3" id="text-11-6">
+<p>
+L'aplicacio
+</p>
+\begin{alignat*}{3}
+G \cdot x &\to \sfrac{G}{G_x}& \\
+ax &\mapsto a\cdot G_x&
+\end{alignat*}
+<p>
+esta ben definida i es bijectiva. En particular, <br >
+</p>
+<ol class="org-ol">
+<li>\(\vert G \cdot x \vert = \vert \sfrac{G}{G_x}\vert = [G:G_x]\)
+</li>
+<li>Si G es finit, \(\vert G \cdot x \vert \text{ divideix } \vert G \vert\)
+</li>
+<li>Si X es finit, \(\vert X \vert = \sum_{i=1}^{n} \vert G \cdot x_i \vert = \sum_{i=1}^n [G:G_{x_i}]\)
+</li>
+</ol>
+</div>
+<div id="outline-container-sec-11-6-1" class="outline-4">
+<h4 id="sec-11-6-1"><span class="section-number-4">11.6.1</span> <span class="label label-primary TODO">TODO</span> DEMO</h4>
+</div>
+</div>
+
+<div id="outline-container-sec-11-7" class="outline-3">
+<h3 id="sec-11-7"><span class="section-number-3">11.7</span> Definicio: punt fix</h3>
+<div class="outline-text-3" id="text-11-7">
+<p>
+\(x \in X\) es un punt fix per l'accio si ax = x \(\forall a \in G\). En particular<br >
+\(G \cdot x = \{ax \mid a \in G\} = \{x\}\), \(G_x = \{ a \in G \mid ax = x \} = G\)
+</p>
+</div>
+</div>
+
+<div id="outline-container-sec-11-8" class="outline-3">
+<h3 id="sec-11-8"><span class="section-number-3">11.8</span> Definicio: Accio Transitiva</h3>
+<div class="outline-text-3" id="text-11-8">
+<p>
+\(G \times X \to X\) es accio transitiva si &forall; x,y &isin; X, &exist; a &isin; G \text{ tal que } y = ax. <br >
+En aquest cas. G &sdot; y = X &forall; \quad y &isin; X.
+</p>
+</div>
+</div>
+
+<div id="outline-container-sec-11-9" class="outline-3">
+<h3 id="sec-11-9"><span class="section-number-3">11.9</span> Definicio: Accio Fidel</h3>
+<div class="outline-text-3" id="text-11-9">
+<p>
+\(G \times X \to X\) es accio fidel si &forall; a &ne; b, a,b &isin; G. Aleshores m<sub>a</sub> &ne; m<sub>b</sub>, on
+</p>
+\begin{alignat*}{3}
+m_a: &X &\to X \\
+&x &\mapsto ax
+\end{alignat*}
+<p>
+m<sub>a</sub> &isin; Perm(x)
+</p>
+</div>
+
+<div id="outline-container-sec-11-9-1" class="outline-4">
+<h4 id="sec-11-9-1"><span class="section-number-4">11.9.1</span> Observacio:</h4>
+<div class="outline-text-4" id="text-11-9-1">
+<p>
+Si be \(G \times X \to X \cong m: G \to Perm(x)\) es morfisme de grups, si imposem que es fidel, el morfisme es injectiu. A mes si X es finit l'accio es isomorf a un subgrup del grup simetric.
+</p>
+</div>
+</div>
+</div>
+
+<div id="outline-container-sec-11-10" class="outline-3">
+<h3 id="sec-11-10"><span class="section-number-3">11.10</span> Accio per translacio en X, quan X = G</h3>
+<div class="outline-text-3" id="text-11-10">
+<p>
+Sigui G un grup, definim
+</p>
+\begin{alignat*}{4}
+&G \times &G &\to G \\
+&a &x &\mapsto a \cdot x = ax
+\end{alignat*}
+<p>
+I es efectivament una accio.
+</p>
+</div>
+</div>
+<div id="outline-container-sec-11-11" class="outline-3">
+<h3 id="sec-11-11"><span class="section-number-3">11.11</span> Teorema de Cayley</h3>
+<div class="outline-text-3" id="text-11-11">
+<p>
+Sigui G un grup finit, n = |G|. Aleshores G es isomorf a un subgrup del grup simetric \(\mathcal{S}_n\)
+</p>
+</div>
+<div id="outline-container-sec-11-11-1" class="outline-4">
+<h4 id="sec-11-11-1"><span class="section-number-4">11.11.1</span> <span class="label label-primary TODO">TODO</span> Demo</h4>
+</div>
+</div>
+
+
+<div id="outline-container-sec-11-12" class="outline-3">
+<h3 id="sec-11-12"><span class="section-number-3">11.12</span> Definicio: Accio per conjugacio de G en X = G</h3>
+<div class="outline-text-3" id="text-11-12">
+\begin{alignat*}{4}
+&G \times &G &\to G \\
+&a &x &\mapsto a \cdot x = axa^{-1}
+\end{alignat*}
+</div>
+
+<div id="outline-container-sec-11-12-1" class="outline-4">
+<h4 id="sec-11-12-1"><span class="section-number-4">11.12.1</span> Proposicio:</h4>
+<div class="outline-text-4" id="text-11-12-1">
+<p>
+\(x \in G \text{ es punt fix } \iff a \cdot x = x \quad \forall a \in G \iff axa^{-1} = x \forall a \in G \iff ax = xa \quad \forall a \in G \iff x \in \mathcal{Z}(G) = \{ x \in G \mid ax = xa \quad \forall a \in G \} = \text{ centre de G}\). El centre de G es subgrup.
+</p>
+</div>
+</div>
+
+<div id="outline-container-sec-11-12-2" class="outline-4">
+<h4 id="sec-11-12-2"><span class="section-number-4">11.12.2</span> Proposicio:</h4>
+<div class="outline-text-4" id="text-11-12-2">
+<p>
+L'estabilitzador de y &isin; G es \(G_y = \{a \in G \mid a \cdot y = y \} = \{ a \in G \mid aya^{-1} = y \} = \{ a \in G \mid ay = ya \} = \mathcal{Z}_{G}(y)\),  centralitzador de G. El centralitzador tambe es un subgrup de G.
+</p>
+</div>
+</div>
+</div>
+
+<div id="outline-container-sec-11-13" class="outline-3">
+<h3 id="sec-11-13"><span class="section-number-3">11.13</span> Definicio: Accio per translacio en les classes laterals</h3>
+<div class="outline-text-3" id="text-11-13">
+<p>
+Sigui G grup, H subgrup de G i X = \(\sfrac{G}{H}\) = { aH \mid a &isin; G}
+</p>
+\begin{alignat*}{4}
+&G \times &\sfrac{G}{H} &\to \sfrac{G}{H} \\
+&a &bH &\mapsto abH
+\end{alignat*}
+
+<ul class="org-ul">
+<li>Es una accio transitiva.
+</li>
+<li>si \(aH \in X = \sfrac{G}{H} \text{: L'estabilitzador de aH es } G_{aH} = \{ b \in G \mid b(aH) = aH \} = aHa^{-1} \)
+</li>
+</ul>
+</div>
+</div>
+
+
+<div id="outline-container-sec-11-14" class="outline-3">
+<h3 id="sec-11-14"><span class="section-number-3">11.14</span> Definicio: Accio per conjugacio en els subgrups</h3>
+<div class="outline-text-3" id="text-11-14">
+<p>
+Sigui G grup i \( X = \{ H \mid \text{ H subgrup de G} \}. \)
+</p>
+\begin{alignat*}{4}
+&G \times &\text{\{sg. de yG\}} &\to \text{\{sg. de G\}, conjugat de H} \\
+&a &H &\mapsto aHa^{-1}
+\end{alignat*}
+<p>
+Si H es subgrup de G, l'orbita d'H es: <br >
+\(G\cdot H =\{a \cdot H\mid a\in G \} = \{aHa^{-1} \mid a \in G \} \text{: els conjugats de H} \) <br >
+H es punt fix per l'accio si \(a\dotH = H \iff aHa^{-1} = H \quad \forall a \in G \iff \text{H es subgrup normal de G} \)
+L'estabilitzador de H es: \( G_H = \{a \in G \mid a \cdot H\} = \{ a \in \G \mid aHa^{-1} = H \} = N_{G}(H)\): Normalitzador de H en G<br >
+Sabem que \( \vert G \cdot H\vert = [G : G_H ]. \) Per tant. <br >
+\( H \vartriangleleft G \iff \text{H es punt fix per l'accio} \iff \text{L'orbita de H te un sol punt } \iff \vert G \cdot H \vert = 1 \iff [ G : G_H] = 1 \iff G_H = G \iff N_{G}(H) = G \)
+</p>
+</div>
+</div>
+
+<div id="outline-container-sec-11-15" class="outline-3">
+<h3 id="sec-11-15"><span class="section-number-3">11.15</span> Teorema de Cauchy</h3>
+<div class="outline-text-3" id="text-11-15">
+<p>
+Sigui G un grup finit, |G| = n. Sigui p primer tal que p|n. <br >
+ALeshores, &exist; x &isin; G tal que ord(x) = p
+</p>
+</div>
+
+<div id="outline-container-sec-11-15-1" class="outline-4">
+<h4 id="sec-11-15-1"><span class="section-number-4">11.15.1</span> <span class="label label-primary TODO">TODO</span> Demo</h4>
+</div>
+</div>
+</div>
+
+<div id="outline-container-sec-12" class="outline-2">
+<h2 id="sec-12"><span class="section-number-2">12</span> Subgrups de Sylow</h2>
+<div class="outline-text-2" id="text-12">
+</div><div id="outline-container-sec-12-1" class="outline-3">
+<h3 id="sec-12-1"><span class="section-number-3">12.1</span> Definicio: p-grups: Subgrups de Sylow</h3>
+<div class="outline-text-3" id="text-12-1">
+<p>
+Sigui G un grup i p un nombre primer. Aleshores,  G es un p-grup \iff &vert; G &vert; = p<sup>r</sup> per a algun r &ge; 0.
+</p>
+</div>
+</div>
+
+<div id="outline-container-sec-12-2" class="outline-3">
+<h3 id="sec-12-2"><span class="section-number-3">12.2</span> Teorema:</h3>
+<div class="outline-text-3" id="text-12-2">
+<p>
+Sigui G un p-grup. Aleshores, |G| = p<sup>r</sup>, r &ge; 0, i:
+</p>
+<ol class="org-ol">
+<li>G no trivial \( \iff \mathcal{Z}(G) \) no trivial.
+</li>
+<li>G es resoluble
+</li>
+<li>si G es simple, aleshores G \( \cong \sfrac{\mathbb{Z}}{p\mathbb{Z}} \)
+</li>
+</ol>
+</div>
+</div>
+</div>
+
+<div id="outline-container-sec-13" class="outline-2">
+<h2 id="sec-13"><span class="section-number-2">13</span> Teoremas de Sylow</h2>
+</div>
+</div><div class="col-md-3"><nav id="table-of-contents">
+<div id="text-table-of-contents" class="bs-docs-sidebar">
+<ul class="nav">
+<li><a href="#sec-1">1. Grup</a></li>
+<li><a href="#sec-2">2. Interseccio, unio, producte i generacio</a></li>
+<li><a href="#sec-3">3. Ordre d'un element, grup ciclic</a></li>
+<li><a href="#sec-4">4. Morfismes de grups</a></li>
+<li><a href="#sec-5">5. Classes laterals</a>
+<ul class="nav">
+<li><a href="#sec-5-1">5.1. Definicio</a></li>
+<li><a href="#sec-5-2">5.2. Definicio de la classe d'equivalencia</a></li>
+<li><a href="#sec-5-3">5.3. Definicio Classe Lateral:</a>
+<ul class="nav">
+<li><a href="#sec-5-3-1">5.3.1. Observacio:</a></li>
+</ul>
+</li>
+<li><a href="#sec-5-4">5.4. Teorema de Lagrange</a>
+<ul class="nav">
+<li><a href="#sec-5-4-1">5.4.1. Demo</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#sec-6">6. Subgrup normal, Grup quocient</a>
+<ul class="nav">
+<li><a href="#sec-6-1">6.1. Definicio: Subgrup Normal</a></li>
+<li><a href="#sec-6-2">6.2. Lema</a>
+<ul class="nav">
+<li><a href="#sec-6-2-1">6.2.1. Demo</a></li>
+</ul>
+</li>
+<li><a href="#sec-6-3">6.3. Observacio</a></li>
+<li><a href="#sec-6-4">6.4. Observacio</a></li>
+<li><a href="#sec-6-5">6.5. Definicio: Operacio interna</a></li>
+<li><a href="#sec-6-6">6.6. Corol.lari</a></li>
+<li><a href="#sec-6-7">6.7. Exercici: La aplicacio quocient es un morfisme</a></li>
+</ul>
+</li>
+<li><a href="#sec-7">7. Primer teorema d'isomorfisme</a>
+<ul class="nav">
+<li><a href="#sec-7-1">7.1. Teorema:</a></li>
+</ul>
+</li>
+<li><a href="#sec-8">8. El grup multiplicatiu d'un cos finit</a>
+<ul class="nav">
+<li><a href="#sec-8-1">8.1. Definicio</a></li>
+<li><a href="#sec-8-2">8.2. Teorema</a>
+<ul class="nav">
+<li><a href="#sec-8-2-1">8.2.1. demo</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#sec-9">9. Grup simples</a>
+<ul class="nav">
+<li><a href="#sec-9-1">9.1. Definicio</a></li>
+<li><a href="#sec-9-2">9.2. Proposicio</a>
+<ul class="nav">
+<li><a href="#sec-9-2-1">9.2.1. Demo</a></li>
+</ul>
+</li>
+<li><a href="#sec-9-3">9.3. Teorema de Feit-Thompspn</a></li>
+<li><a href="#sec-9-4">9.4. Teorema</a>
+<ul class="nav">
+<li><a href="#sec-9-4-1">9.4.1. Demo</a></li>
+</ul>
+</li>
+<li><a href="#sec-9-5">9.5. Proposicio</a>
+<ul class="nav">
+<li><a href="#sec-9-5-1">9.5.1. Demo</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#sec-10">10. Grup resolubles</a>
+<ul class="nav">
+<li><a href="#sec-10-1">10.1. Definicio torre normal</a></li>
+<li><a href="#sec-10-2">10.2. Definicio Grup Resoluble</a></li>
+<li><a href="#sec-10-3">10.3. Teorema: Segon Teorema d'isomorfisme</a>
+<ul class="nav">
+<li><a href="#sec-10-3-1">10.3.1. Demo</a></li>
+</ul>
+</li>
+<li><a href="#sec-10-4">10.4. Teorema: Jordan-Holder</a>
+<ul class="nav">
+<li><a href="#sec-10-4-1">10.4.1. Demo</a></li>
+</ul>
+</li>
+<li><a href="#sec-10-5">10.5. Proposicio</a></li>
+</ul>
+</li>
+<li><a href="#sec-11">11. Accio d'un grup en un conjunt</a>
+<ul class="nav">
+<li><a href="#sec-11-1">11.1. Definicio: Accio d'un grup en un conjunt</a></li>
+<li><a href="#sec-11-2">11.2. Observacio</a></li>
+<li><a href="#sec-11-3">11.3. Definicio: Orbita d'un element</a></li>
+<li><a href="#sec-11-4">11.4. Definicio: L'estabilitzador/grup d'isotropia d'x &isin; X</a></li>
+<li><a href="#sec-11-5">11.5. Lema:</a>
+<ul class="nav">
+<li><a href="#sec-11-5-1">11.5.1. DEMO</a></li>
+</ul>
+</li>
+<li><a href="#sec-11-6">11.6. Proposicio</a>
+<ul class="nav">
+<li><a href="#sec-11-6-1">11.6.1. DEMO</a></li>
+</ul>
+</li>
+<li><a href="#sec-11-7">11.7. Definicio: punt fix</a></li>
+<li><a href="#sec-11-8">11.8. Definicio: Accio Transitiva</a></li>
+<li><a href="#sec-11-9">11.9. Definicio: Accio Fidel</a>
+<ul class="nav">
+<li><a href="#sec-11-9-1">11.9.1. Observacio:</a></li>
+</ul>
+</li>
+<li><a href="#sec-11-10">11.10. Accio per translacio en X, quan X = G</a></li>
+<li><a href="#sec-11-11">11.11. Teorema de Cayley</a>
+<ul class="nav">
+<li><a href="#sec-11-11-1">11.11.1. Demo</a></li>
+</ul>
+</li>
+<li><a href="#sec-11-12">11.12. Definicio: Accio per conjugacio de G en X = G</a>
+<ul class="nav">
+<li><a href="#sec-11-12-1">11.12.1. Proposicio:</a></li>
+<li><a href="#sec-11-12-2">11.12.2. Proposicio:</a></li>
+</ul>
+</li>
+<li><a href="#sec-11-13">11.13. Definicio: Accio per translacio en les classes laterals</a></li>
+<li><a href="#sec-11-14">11.14. Definicio: Accio per conjugacio en els subgrups</a></li>
+<li><a href="#sec-11-15">11.15. Teorema de Cauchy</a>
+<ul class="nav">
+<li><a href="#sec-11-15-1">11.15.1. Demo</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#sec-12">12. Subgrups de Sylow</a>
+<ul class="nav">
+<li><a href="#sec-12-1">12.1. Definicio: p-grups: Subgrups de Sylow</a></li>
+<li><a href="#sec-12-2">12.2. Teorema:</a></li>
+</ul>
+</li>
+<li><a href="#sec-13">13. Teoremas de Sylow</a></li>
+</ul>
+</div>
+</nav>
+</div></div></div>
+<footer id="postamble" class="">
+<div><p class="author">Author: Dean</p>
+<p class="date">Created: 2017-12-11 lun 17:16</p>
+<p class="creator"><a href="http://www.gnu.org/software/emacs/">Emacs</a> 25.3.1 (<a href="http://orgmode.org">Org-mode</a> 9.1.3)</p>
+</div>
+</footer>
+</body>
+</html>
