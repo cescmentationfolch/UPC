@@ -1,0 +1,10 @@
+* P1
+** Convergencia
+| 4 | 8 | 16 | 32 |
+|   |   |    |    |
+|   |   |    |    |
+ prediure
+** Desigualtat
+** Implementat
+** Hecho
+** comparar
