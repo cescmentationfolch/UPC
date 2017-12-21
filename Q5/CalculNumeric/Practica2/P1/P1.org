@@ -1,44 +1,109 @@
-#+LATEX_HEADER: \usepackage[margin=3cm]{geometry}
+#+LATEX_HEADER: \usepackage[margin=2cm]{geometry}
 #+LATEX_HEADER: \usepackage{xfrac}
 #+OPTIONS: toc:nil
 
 * P1
 ** Metode del trapezi i quadratura de Newton
 *** Valors obtinguts:
- | Subintervals       |         4 |          8 |        16 |        32 |        64 |       128 |
- | Quadratura de Simpson | 0.9878242 |  0.0506787 | 0.1516852 | 0.3574180 | 0.3162449 | 0.3159174 |
- | Metode del Trapezi | 0.2114939 | -0.4753275 | 0.1954926 | 0.1715777 | 0.3111791 | 0.3149939 |
- | Subintervals       |       256 |        512 |      1024 |      2048 |      4096 |      8192 |
- | Quadratura de Simpson | 0.3159050 |  0.3159043 | 0.3159042 | 0.3159042 | 0.3159042 | 0.3159042 |
- | Metode del Trapezi | 0.3156883 |  0.3158510 | 0.3158910 | 0.3159009 | 0.3159034 | 0.3159040 |
+ | Subintervals          |         4 |         8 |        16 |        32 |        64 |       128 |
+ |-----------------------+-----------+-----------+-----------+-----------+-----------+-----------|
+ | Quadratura de Simpson | 0.5811321 | 0.3350465 | 0.1059936 | 0.3529160 | 0.3162173 | 0.3159170 |
+ | Metode del Trapezi    | 1.1027294 | 0.7115314 | 0.4291677 | 0.1867871 | 0.3113838 | 0.3150090 |
+   
+ | Subintervals          |       256 |       512 |      1024 |      2048 |      4096 |      8192 |
+ |-----------------------+-----------+-----------+-----------+-----------+-----------+-----------|
+ | Quadratura de Simpson | 0.3159050 | 0.3159043 | 0.3159043 | 0.3159043 | 0.3159043 | 0.3159043 |
+ | Metode del Trapezi    | 0.3156900 | 0.3158513 | 0.3158911 | 0.3159010 | 0.3159035 | 0.3159041 |
 
  #+CAPTION: Convergencia de les quadratures
  #+NAME: fig:Convergencia P1
- [[./TrapezivsSimpson.jpg]]
+ [[./TrapezivsSimpson.png]]
 
- Observem que ambdos metodes convergeixen correctement, el metode del trapezi te una convergencia quadratica i la quadratura de Simpson una convergencia proporcional a h^5.
+ Observem que ambdos metodes convergeixen correctement, el metode del trapezi te una convergencia quadratica i la quadratura de Simpson una convergencia proporcional a m^4.
+*** Cota de l'error 
+**** Quadratura composta del trapezi
 
- Sabent que l'error que comentem a la quadratura de simpson decreix amb un ordre de 5, podem soposar que la longitud per la qual l'error es menor a 10^{-6} sera approximadament #Subintervals = 2/h = \(\frac{2}{^5\sqrt{10^6}} \). Necessitarem aproximadament 32 intervals.
+Sabem que la quadratura composta del trapezi comet un error de: 
+\[
+ E_m = -\frac{(b-a)^3}{12m^2}f^{''}(\mu) =  -\frac{2}{3m^2}f^{''}(\mu) 
+\]
+\[
+ f^{''} = 4e^{2x}cos(e^{2x}) - 4e^{4x}sin(e^{2x})
+\]
+La segona derivada assoleix un maxim valor absolut en el punt x = 2, i \( f^{''}(2) \approx 11000 \). Per tant:
+\[
+\lvert E_m \rvert \leq \bigg\lvert \frac{2\cdot11000}{3} \cdot m^{-2} \bigg\rvert
+\] 
+Llavors si volem un error menor a 10^{-6}:
+\[
+85000 \approx \sqrt{\frac{2\cdot11000}{10^{-6} * 3}} \geq m
+\]
 
- # Necessitem 512 intervals, f4 es gran
+Ens dona una fita clarament massa alta (amb 8192 intervals, la quadratura composta del trapezi nomes comet un error de \(2\cdot10^{-7}\)).
+
+#+CAPTION: Logaritme en base 10 del error del metode del Trapezi 
+[[./Trapezilog10.png]]
+
+Ara be, si ens fixem en la grafica del error, sembla que el metode cometra un error absolut de 10^{-6} quan s'avalua amb 10^{3.6} \( \approx 4000 \) cops.
+Si suposem que la funcio del error es prou monotonament decreixent podem fer una cerca dicotomica i obtenim que el nombre de intervals necessaris son 3722.
+Si avaluem aquestes fites, veiem que la quadratura retorna els valors seguents
+| Intervals |        Valor | Error Absolut         | Error Relatiu         |
+|-----------+--------------+-----------------------+-----------------------|
+|     85000 | 0.3159402831 | 1.91722 \cdot 10^{-9} | 6.06899 \cdot 10^{-9} |
+|      4000 | 0.3159034192 | 8.65787 \cdot 10^{-7} | 2.74066 \cdot 10^{-6} |
+|      3722 | 0.3159032851 | 9,99959 \cdot 10^{-7} | 3.16538 \cdot 10^{-6} |
+Sembla ser que la cota real esta mes propera a l'aproximacio obtinguda mirant la grafica. 
+
+**** Quadratura composta de Simpson
+
+Prenent un altre cop la fita del error de la funcio 
+
+\[
+\lvert E_m \rvert = \bigg\lvert \frac{(b-a)^5}{2880m^4}f^{4)}(\mu) \bigg\rvert
+\]
+\[
+f^{4)}(\mu) = -112e^{4x}sin(e^{2x})+16e^{8x}sin(e^{2x})+16e^{2x}cos(e^{2x})-96e^{6x}cos(e^{2x})
+\]
+i assoleix un maxim en valor absolut en el punt x = 2, on val 1.26\(\cdot 10^8\). Per tant
+\[
+\lvert E_m \rvert \leq \bigg\lvert \frac{2^5\cdot 1.26 \cdot 10^8}{2880\cdot m^4} \bigg\rvert
+\] 
+Llavors si volem un error menor a 10^{-6}:
+\[
+ m \leq \sqrt[\leftroot{-3}\uproot{3}4]{\bigg\lvert \frac{1^5\cdot 1.26 \cdot 10^8}{2880 \cdot 10^-66} \bigg\rvert} \approx 10^{12} 
+\]
+
+En aquest cas obtenim una cota massa gran per poderla avaluar en una maquina. En qualsevol cas sabem que aquesta cota es massa alta ja que quan m = 512 la quadratura composta de Simpson nomes comet un error de 10^{-6}.
+
+#+CAPTION: Logaritme en base 10 del error de la quadratura de Simpson
+ [[./Simpsonlog10.png]]
+
+Si ens fixem en la grafica podem observar que una fita raonable es 10^{2,8} \( \approx 630 \). Com la grafica es en funcio de les avaluacions prenem la meitat.
+Si suposem un altre cop que l'error es prou monoton podem fer una cerca dicotomica i ara obtenim que el nombre d'intervals necessaris son 237
+Si avaluem la fita obtenim:
+| Intervals |      Valor | Error Absolut          | Error Relatiu          |
+|-----------+------------+------------------------+------------------------|
+|       315 | 0.31590460 | 3.154840 \cdot 10^{-7} | 9.986699 \cdot 10^{-7} |
+|       237 | 0.31590528 | 9.986834 \cdot 10^{-7} | 3.161348 \cdot 10^{-6} |
+
 ** Simpson Adaptat
 *** Fita del Error
  Volem veure que la quadratura de Simpson adaptada ens produeix un error fitat (per \(2\epsilon\) en aquest cas). Considerem tots els intervals (x_i, y_i) tals que retornen el valor de la quadratura sense fer la crida recursiva. Sigui E_{i} l'error comes per l'interval i-essim, com tots aquests intervals son disjunts i la seva unio es (0,2) tenim que:
  \[ \sum_{i=0}^{r} E_{i} < \sum_{i=0}^{r} (y_i - x_i)*\epsilon = (b-a)*\epsilon = 2\epsilon \]
  Per tant l'error esta fitat per \( 2\epsilon.\)
 *** Valors obtinguts
-Cridant a la funcio amb una tolerancia de 10^{-3} obtenim 0.3159216 i un error absolut de 6.4188e-04. mentres que la funcio /integral/ a matlab ens retorna 0.3159042. En efecte, hem comes un error menor a 2\cdot10^{-3}.
+Cridant a la funcio amb una tolerancia de 10^{-3} obtenim 0.3159217 i un error absolut de 6.4188e-04. mentres que la funcio /integral/ a matlab ens retorna 0.3159042. En efecte, hem comes un error menor a 2\cdot10^{-3}.
 
-Els intervals que utilitzem en aquest cas son (200 punts):
+Els intervals que utilitzem en aquest cas son (51 punts):
 
 #+CAPTION: Simpson Adaptat amb tolerancia 10^{-3}
 #+NAME: fig:Simpson Adaptat amb tolerancia 10^{-3}
-[[./SimpsonAdaptat.jpg]]
+[[./SimpsonAdaptat.png]]
 
-Si volem una precisio de 10^{-6} obtenim com a resposta 0.3159041 i utilitzem 579 punts:
+Si volem una precisio de 10^{-6} obtenim com a resposta 0.3159041 i utilitzem 258 punts:
 
 #+CAPTION: Simpson Adaptat amb tolerancia 10^{-6}
 #+NAME: fig:Simpson Adaptat amb tolerancia 10^{-6}
-[[./SimpsonAdaptat2.jpg]]
+[[./SimpsonAdaptat2.png]]
 
 Donat que la figura oscil.la molt mes a la esquerre, si utilitzem la quadratura de simpson amb intervals uniformes utilitzem molts mes punts dels que necessitem, ja que a l'interval (0,1) no calen masses punts per poder aproximar el valor de l'integral. La quadratura de Simpson adaptada ens permet aproximar l'integral sense fer servir punts inutils. De fet quan volem una precisio de 10^{-6} nomes 68 punts es troben a l'interval (0,1)
