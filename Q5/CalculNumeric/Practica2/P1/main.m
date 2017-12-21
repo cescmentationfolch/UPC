@@ -9,8 +9,8 @@ for i = 1:12
 end
 
 figure
-plot(log2(interval), log2(eTrapezi), 'r+', log2(interval), log2(eSimpson), 'b*')
+plot(log2(interval), log2(eTrapezi), 'r+', log2(2.*interval-1), log2(eSimpson), 'b*')
 grid on;
 legend('Metode del Trapezi', 'Quadratura de Simpson');
-xlabel('log2(Nombre de subintervals)');
+xlabel('log2(Nombre d''avaluacions)');
 ylabel('log2(error)');

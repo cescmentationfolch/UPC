@@ -1,0 +1,78 @@
+#+LATEX_HEADER: \usepackage[margin=3cm]{geometry}
+#+LATEX_HEADER: \usepackage{xfrac}
+#+TITLE: Estructures Algebraiques: Tema 2
+#+OPTIONS: toc:4
+
+* Anell
+
+** Definicio Anell
+ Un *anell* es un conjunt A amb dues operacions internes, la suma (+) i el producte (\(\cdot\)), tals que: \\
+ 1. (A, +) es grup abelia
+ 2. (A, \cdot) verifica la propietat associativa.
+ 3. Propietat distributiva del producte respecte la suma.
+L'anell es commutatiu si \( ab = ba \quad \forall a,b \in A\) \\
+L'anell es unitari si existeix neutre pel producte.
+
+** Propietats:
+1. a \cdot 0 = 0
+2. 1 = 0 \(\iff\) A = 0
+3. (-1) \cdot x = -x
+4. Suposem (A,+, \cdot) anell commutatiu amb unitat aleshores la suma es commutativa. (S'imposa a la definicio per si l'anell no es unitari)
+
+
+** Definicio A^{*}
+\( A^{*} = \{ a \in A \mid \exists b \in A \text{ tal que } ab = 1 \}\), elements invertibles de A. \\
+Llavors A^* es el grup multiplicatiu i es un grup abelia.
+
+** Definicio Cos
+Un *cos* es un anell A commutatiu amb unitat tal que A^* = A \ {0}.
+
+** Definicio Subanell
+Un *Subanell* de A es un subconjunt B $\subseteq$ A tal que amb la suma, el producte i el deutre de A 1_A, es un anell.
+
+* Ideals
+
+** Definicio ideals
+Sigui A un anell commutatiu amb unitat. Un *ideal de A* es un subconjunt I de A tal que cumpleix:
+1. 0 \in I
+2. \( \forall x, y \in I, \quad x + y \in I \)
+3. \( \forall x \in I, \forall a \in A, ax \in I \)
+
+
+*** Observacio
+La condicio 1 equival a que I \( \neq \varnothing \).
+
+*** Ideal impropi
+Direm que un Ideal I es impropi si\( I = \varnothing \).
+
+*** Ideal principal
+Sigui A anell i x \in A. El conjunt de multiples de x = \( \{ ax \mid a \in A \} \) es un ideal de A. Se l'anomena *ideal principal*
+
+**** Observacio
+Tot ideal de $\mathcal{Z}$ es principal.
+
+*** Proposicio
+\( I = A \iff 1 \in I \iff I \cap A^* \neq \varnothing \).
+
+*** Proposicio
+Sigui A anell commutatiu amb unitat. Aleshores, A es cos \( \iff \{\text{ideals de A}\} = \{0,A\} \)
+
+** Operacions amb ideals
+
+*** Interseccio
+Sigui A anell, I, J ideals de A.
+La interseccio de I i J es I \cap J = \( \{ x \in A \mid x \in I, x \in J\} \) \\
+Si I, J son ideals de A $\implies$ I $\cap$ J es ideal de A.
+
+*** Unio
+Sigui A anell, I, J ideals de A.
+La unio de I i J es I \cup J = \( \{ x \in A \mid x \in I \text{ o } x \in J\} \) \\
+En general l'unio de ideals no es ideal.
+
+*** Suma
+Sigui A anell, I, J ideals de A.
+La suma de I i J es I + J = \( \{ x + y \mid x \in I, y \in J\} \) \\
+Si I, J son ideals de A $\implies$ I + J es ideal de A. \\ A mes a mes es el menor ideal que conte \( I \cup J \).
+
+*** Generador
+Sigui A un anell, x_1, \dots, x_r \in A. Aleshores <x1,\dots,x_r> = \( \{ a_{1}x_{1} + \dots + a_{r}x_{r} \mid a_i \in A \} \) es el menor ideal de A que conte  x_1, \dots, x_r
