@@ -20,7 +20,6 @@ public class CtrlAsignaturaFichero {
 	 * Para acceder a esta instancia lo haremos mediante la llamada
 	 * CtrlAsignaturaFicher.getInstance();
 	 **/
-	
 	private static CtrlAsignaturaFichero singletonObject;
 
 	public static CtrlAsignaturaFichero getInstance() {
@@ -31,7 +30,6 @@ public class CtrlAsignaturaFichero {
 	}
 
 	/** Constructora privada. **/
-	
 	private CtrlAsignaturaFichero() {
 	}
 

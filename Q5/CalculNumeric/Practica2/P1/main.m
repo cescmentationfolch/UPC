@@ -10,7 +10,7 @@ for i = 1:12
 end
 
 figure(1)
-plot(log2(interval+1), log2(eTrapezi), 'r+-', log2(2.*interval+1), log2(eSimpson), 'b*-')
+plot(log2(interval+1), log2(eTrapezi), 'r+-', log2(2*interval+1), log2(eSimpson), 'b*-')
 grid minor;
 leg = legend('Metode del Trapezi', 'Quadratura de Simpson');
 leg.FontSize = 15;
@@ -18,7 +18,7 @@ leg.FontSize = 15;
 xlabel('log2(Nombre d''avaluacions de la funcio)');
 ylabel('log2(Error Absolut)');
 
-fprintf("Suposem que l'error es prou linial i fem una dicotomica per trobar\n el minim m pel metode del trapezi tal que l'error absolut es menor a 1e-6\n");
+fprintf("Si suposem que l'error es decreixent, podem fer una dicotomica per trobar\n el minim m pel metode del trapezi tal que l'error absolut es menor a 1e-6\n");
 l = 2047;
 r = 4096;
 while l + 1 < r
@@ -38,7 +38,7 @@ leg.FontSize = 15;
 xlabel('log10(Nombre d''avaluacions de la funcio)');
 ylabel('log10(Error absolut)');
 
-fprintf("Suposem que l'error es prou linial i fem una dicotomica per trobar\n el minim m per la quadratura de Simpson tal que l'error absolut es menor a 1e-6\n");
+fprintf("Si suposem que l'error es decreixent, podem fer una dicotomica per trobar\n el minim m per la quadratura de Simpson tal que l'error absolut es menor a 1e-6\n");
 l = 127;
 r = 512;
 while l + 1 < r
@@ -60,7 +60,7 @@ ylabel('log10(Error absolut)');
 
 
 figure(4)
-[V, E, P] = SimpsonAdaptat(f, 0, 2, 1e-3);
+[V, P] = SimpsonAdaptat(f, 0, 2, (1e-3)/2);
 plot(P, f(P), 'b*-',P, zeros(length(P),1), '.')
 grid minor;
 leg = legend('Quadratura de Simpson Adaptada');
@@ -68,8 +68,9 @@ leg.FontSize = 15;
 xlabel('x');
 ylabel('sin(exp(2x))');
 
+
 figure(5)
-[V, E, P] = SimpsonAdaptat(f, 0, 2, 1e-6);
+[V, P] = SimpsonAdaptat(f, 0, 2, (1e-6)/2);
 plot(P, f(P), 'b*-', P, zeros(length(P),1), '.')
 grid minor;
 leg = legend('Quadratura de Simpson Adaptada');

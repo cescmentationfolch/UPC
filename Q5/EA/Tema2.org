@@ -76,3 +76,43 @@ Si I, J son ideals de A $\implies$ I + J es ideal de A. \\ A mes a mes es el men
 
 *** Generador
 Sigui A un anell, x_1, \dots, x_r \in A. Aleshores <x1,\dots,x_r> = \( \{ a_{1}x_{1} + \dots + a_{r}x_{r} \mid a_i \in A \} \) es el menor ideal de A que conte  x_1, \dots, x_r
+
+* Anell quocient
+1. Relacio: A - B \in I
+2. Es un anell Commutatiu amb unitat
+3. Els teoremes d'isomorfisme son analegs
+
+* Divisors de zero
+1. Son els elements a, que existeix algun b diferent de 0 tal que ab = 0 (No es un Ideal)
+2. A es integre/domini/domini d'integritat si els divisors de 0 es nomes el 0.
+
+* Anell de fraccions
+
+** Sistema multiplicativament tancat
+Subconjunt de A tq 1 pertany, el producte de 2 elements pertany.
+
+1. AxS definim la relacio d'equivalencia (a,b) relacionat amb (c,d) si u(ad-bc) = 0, u pertanyent a S. 
+2. Definim S^{-1}A = AxS/~ a/s anell de fraccions. Es commutatiu i unitari.
+
+* Ideals Maximals, ideals primers
+1. Maximal vol dir que no existeix un ideal que el contingui different del total.
+2. Primer vol dir que si XY pertany, X o Y es del ideal.
+3. Lema: Si M es ideal maximal, tambe es primer. El reciproc es fals
+4. Proposicio: Si A es anell commutatiu, aleshores M maximal \iff A/M es cos
+5. Proposicio: Si A es anell commutatiu, aleshores P primer \iff A/P es domini d'integritat (la condicio de primalitat modul P es converteix X o Y \in P a X o Y = 0)
+6. Lema de Zorn = Axioma de l'eleccio = Principi de bona ordenacio: Si tota cadena te cota suberior en el conjunt, qualsevol subconjunt te un element maxim.
+7. Teorema d'artin: Qualsevol anell commutatiu te ideal maximal
+
+* Divisibilitat
+1. x divideix y si ax = y.
+2. Si <x> = <y>, es divideixen mutuament y = ax
+3. Si y = ax, direm que son associats i es una classe d'equivalencia (en Z +- 1 son associats)
+4. el maxim comu divisor es dividit per tots els divisors comus.
+5. el minim comu multiple divideix a tots els multiples comuns
+6. <a,b> = <d> \iff d = (a,b)
+7. si tot ideal es principal, aleshores sempre existeix mcd
+
+
+
+* Anell Factorial
+

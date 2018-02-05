@@ -1,0 +1,73 @@
+% Created 2018-01-10 Wed 16:00
+% Intended LaTeX compiler: pdflatex
+\documentclass[11pt]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{graphicx}
+\usepackage{grffile}
+\usepackage{longtable}
+\usepackage{wrapfig}
+\usepackage{rotating}
+\usepackage[normalem]{ulem}
+\usepackage{amsmath}
+\usepackage{textcomp}
+\usepackage{amssymb}
+\usepackage{capt-of}
+\usepackage{hyperref}
+\date{\today}
+\title{}
+\hypersetup{
+ pdfauthor={},
+ pdftitle={},
+ pdfkeywords={},
+ pdfsubject={},
+ pdfcreator={Emacs 25.3.1 (Org mode 9.1.3)}, 
+ pdflang={English}}
+\begin{document}
+
+\tableofcontents
+
+\section{Integracio Numerica}
+\label{sec:org9c6a943}
+
+\subsection{Metodes}
+\label{sec:org44c12d5}
+
+\subsubsection{Simple o Composta}
+\label{sec:orge1d3555}
+
+\subsubsection{Segon les dades}
+\label{sec:org46af586}
+\begin{enumerate}
+\item Newton-Cotes: els punts estan fixats
+\label{sec:org1dcde48}
+\item Gauss: Podem avaluar la funcio en un punt
+\label{sec:org707793b}
+\end{enumerate}
+\subsubsection{Oberta o tancada}
+\label{sec:org7fd74db}
+
+\subsection{Ordre d'una quadratura}
+\label{sec:org19f78b7}
+Una quadratura es d'ordre q, si integra exactament un polinomi de grau q. (per exemple si l'error depen de la derivada q+1-essima)
+
+\subsection{Quadratura: Newton-Cotes}
+\label{sec:org10b6174}
+Fixats els punts \(\{x_{i} \}_{i=0\div n}\), volem una formula
+\[ I = \int_{a}^{b} f(x) dx \approx \sum_{i=0}^{n} w_{i}f(x_i) \]
+
+
+\subsubsection{Formula de trapezi}
+\label{sec:org2b7ac8b}
+\[ I = w_{0}f(a) + w_{1}f(b) + E_{1} \] 
+on \(w_{0} = w_{1} = \frac{h}{2}, E_{1} = -\frac{h^3}{12}f^{''}(\mu), \mu \in [a,b].\)
+
+\subsubsection{Quadratura de Simpson}
+\label{sec:org83af6a9}
+\[ I = w_{0}f(x_{0}) + w_{1}f(x_{1}) + w_{2}f(x_{2}) + E_2 \]
+on \(w_{0} = w_{2} = \frac{1}{3}, w_{1} = \frac{4}{3}, E_2 = - \frac{(b-a)^3}{12m^2}f^{4)}(\mu) , \mu \in [a,b].\)
+
+\section{Metodes numerics per EDOs}
+\label{sec:orgb619b82}
+Una EDO de ordre N te forma \(\frac{d^{n}y}{dx^{n}} = f(x, y, \frac{dy}{dx}, .. , \frac{d^{n-1}y}{dx^{n-1}, a < x < b\)
+\end{document}
