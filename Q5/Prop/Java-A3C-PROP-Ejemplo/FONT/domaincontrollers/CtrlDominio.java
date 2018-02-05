@@ -17,7 +17,7 @@ import domain.Asignatura;
 public class CtrlDominio {
 
 	/** Atributos **/
-	
+
 	private CtrlAsignaturaFichero controladorAsignaturaFichero;
 	private Map<String, Asignatura> asignaturas;
 	private Map<String, Alumno> alumnos;

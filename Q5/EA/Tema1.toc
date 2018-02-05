@@ -13,10 +13,10 @@
 \contentsline {subsection}{\numberline {6.3}Definicio Classe Lateral:}{4}{subsection.6.3}
 \contentsline {subsubsection}{\numberline {6.3.1}Observacio:}{4}{subsubsection.6.3.1}
 \contentsline {subsection}{\numberline {6.4}Teorema de Lagrange}{4}{subsection.6.4}
-\contentsline {subsubsection}{\numberline {6.4.1}{\bfseries \sffamily TODO} Demo}{4}{subsubsection.6.4.1}
+\contentsline {subsubsection}{\numberline {6.4.1}Demo}{4}{subsubsection.6.4.1}
 \contentsline {section}{\numberline {7}Subgrup normal, Grup quocient}{4}{section.7}
 \contentsline {subsection}{\numberline {7.1}Definicio: Subgrup Normal}{4}{subsection.7.1}
-\contentsline {subsection}{\numberline {7.2}Lema}{4}{subsection.7.2}
+\contentsline {subsection}{\numberline {7.2}Lema}{5}{subsection.7.2}
 \contentsline {subsubsection}{\numberline {7.2.1}{\bfseries \sffamily TODO} Demo}{5}{subsubsection.7.2.1}
 \contentsline {subsection}{\numberline {7.3}Observacio}{5}{subsection.7.3}
 \contentsline {subsection}{\numberline {7.4}Observacio}{5}{subsection.7.4}
@@ -24,14 +24,16 @@
 \contentsline {subsection}{\numberline {7.6}Corol.lari}{5}{subsection.7.6}
 \contentsline {subsection}{\numberline {7.7}Exercici: La aplicacio quocient es un morfisme}{5}{subsection.7.7}
 \contentsline {section}{\numberline {8}Primer teorema d'isomorfisme}{5}{section.8}
-\contentsline {subsection}{\numberline {8.1}{\bfseries \sffamily TODO} Teorema:}{5}{subsection.8.1}
-\contentsline {section}{\numberline {9}El grup multiplicatiu d'un cos finit}{5}{section.9}
-\contentsline {subsection}{\numberline {9.1}Definicio}{5}{subsection.9.1}
+\contentsline {subsection}{\numberline {8.1}Teorema:}{5}{subsection.8.1}
+\contentsline {subsubsection}{\numberline {8.1.1}{\bfseries \sffamily TODO} demo}{6}{subsubsection.8.1.1}
+\contentsline {subsubsection}{\numberline {8.1.2}Col\(\cdot \)lorari}{6}{subsubsection.8.1.2}
+\contentsline {section}{\numberline {9}El grup multiplicatiu d'un cos finit}{6}{section.9}
+\contentsline {subsection}{\numberline {9.1}Definicio}{6}{subsection.9.1}
 \contentsline {subsection}{\numberline {9.2}Teorema}{6}{subsection.9.2}
-\contentsline {subsubsection}{\numberline {9.2.1}{\bfseries \sffamily TODO} demo}{6}{subsubsection.9.2.1}
-\contentsline {section}{\numberline {10}Grup simples}{6}{section.10}
-\contentsline {subsection}{\numberline {10.1}Definicio}{6}{subsection.10.1}
-\contentsline {subsection}{\numberline {10.2}Proposicio}{6}{subsection.10.2}
+\contentsline {subsubsection}{\numberline {9.2.1}{\bfseries \sffamily TODO} demo}{7}{subsubsection.9.2.1}
+\contentsline {section}{\numberline {10}Grup simples}{7}{section.10}
+\contentsline {subsection}{\numberline {10.1}Definicio}{7}{subsection.10.1}
+\contentsline {subsection}{\numberline {10.2}Proposicio}{7}{subsection.10.2}
 \contentsline {subsubsection}{\numberline {10.2.1}{\bfseries \sffamily TODO} Demo}{7}{subsubsection.10.2.1}
 \contentsline {subsection}{\numberline {10.3}Teorema de Feit-Thompson}{7}{subsection.10.3}
 \contentsline {subsection}{\numberline {10.4}Teorema}{7}{subsection.10.4}
@@ -40,42 +42,42 @@
 \contentsline {subsubsection}{\numberline {10.5.1}{\bfseries \sffamily TODO} Demo}{7}{subsubsection.10.5.1}
 \contentsline {section}{\numberline {11}Grup resolubles}{7}{section.11}
 \contentsline {subsection}{\numberline {11.1}Definicio torre normal}{7}{subsection.11.1}
-\contentsline {subsection}{\numberline {11.2}Definicio Grup Resoluble}{7}{subsection.11.2}
-\contentsline {subsection}{\numberline {11.3}Teorema: Segon Teorema d'isomorfisme}{7}{subsection.11.3}
+\contentsline {subsection}{\numberline {11.2}Definicio Grup Resoluble}{8}{subsection.11.2}
+\contentsline {subsection}{\numberline {11.3}Teorema: Segon Teorema d'isomorfisme}{8}{subsection.11.3}
 \contentsline {subsubsection}{\numberline {11.3.1}{\bfseries \sffamily TODO} Demo}{8}{subsubsection.11.3.1}
 \contentsline {subsection}{\numberline {11.4}Teorema: Jordan-Holder}{8}{subsection.11.4}
 \contentsline {subsubsection}{\numberline {11.4.1}{\bfseries \sffamily TODO} Demo}{8}{subsubsection.11.4.1}
 \contentsline {subsection}{\numberline {11.5}Proposicio}{8}{subsection.11.5}
 \contentsline {section}{\numberline {12}Accio d'un grup en un conjunt}{8}{section.12}
 \contentsline {subsection}{\numberline {12.1}Definicio: Accio d'un grup en un conjunt}{8}{subsection.12.1}
-\contentsline {subsection}{\numberline {12.2}Observacio}{8}{subsection.12.2}
-\contentsline {subsection}{\numberline {12.3}Definicio: Orbita d'un element}{8}{subsection.12.3}
-\contentsline {subsection}{\numberline {12.4}Definicio: L'estabilitzador/grup d'isotropia d'x \(\in \) X}{8}{subsection.12.4}
-\contentsline {subsection}{\numberline {12.5}Lema:}{8}{subsection.12.5}
+\contentsline {subsection}{\numberline {12.2}Observacio}{9}{subsection.12.2}
+\contentsline {subsection}{\numberline {12.3}Definicio: Orbita d'un element}{9}{subsection.12.3}
+\contentsline {subsection}{\numberline {12.4}Definicio: L'estabilitzador/grup d'isotropia d'x \(\in \) X}{9}{subsection.12.4}
+\contentsline {subsection}{\numberline {12.5}Lema:}{9}{subsection.12.5}
 \contentsline {subsubsection}{\numberline {12.5.1}{\bfseries \sffamily TODO} DEMO}{9}{subsubsection.12.5.1}
 \contentsline {subsection}{\numberline {12.6}Proposicio}{9}{subsection.12.6}
 \contentsline {subsubsection}{\numberline {12.6.1}{\bfseries \sffamily TODO} DEMO}{9}{subsubsection.12.6.1}
 \contentsline {subsection}{\numberline {12.7}Definicio: punt fix}{9}{subsection.12.7}
 \contentsline {subsection}{\numberline {12.8}Definicio: Accio Transitiva}{9}{subsection.12.8}
-\contentsline {subsection}{\numberline {12.9}Definicio: Accio Fidel}{9}{subsection.12.9}
-\contentsline {subsubsection}{\numberline {12.9.1}Observacio:}{9}{subsubsection.12.9.1}
-\contentsline {subsection}{\numberline {12.10}Accio per translacio en X, quan X = G}{9}{subsection.12.10}
+\contentsline {subsection}{\numberline {12.9}Definicio: Accio Fidel}{10}{subsection.12.9}
+\contentsline {subsubsection}{\numberline {12.9.1}Observacio:}{10}{subsubsection.12.9.1}
+\contentsline {subsection}{\numberline {12.10}Accio per translacio en X, quan X = G}{10}{subsection.12.10}
 \contentsline {subsection}{\numberline {12.11}Teorema de Cayley}{10}{subsection.12.11}
 \contentsline {subsubsection}{\numberline {12.11.1}{\bfseries \sffamily TODO} Demo}{10}{subsubsection.12.11.1}
 \contentsline {subsection}{\numberline {12.12}Definicio: Accio per conjugacio de G en X = G}{10}{subsection.12.12}
 \contentsline {subsubsection}{\numberline {12.12.1}Centre}{10}{subsubsection.12.12.1}
 \contentsline {subsubsection}{\numberline {12.12.2}Centralitzador}{10}{subsubsection.12.12.2}
-\contentsline {subsection}{\numberline {12.13}Definicio: Accio per translacio en les classes laterals}{10}{subsection.12.13}
-\contentsline {subsection}{\numberline {12.14}Definicio: Accio per conjugacio en els subgrups}{10}{subsection.12.14}
+\contentsline {subsection}{\numberline {12.13}Definicio: Accio per translacio en les classes laterals}{11}{subsection.12.13}
+\contentsline {subsection}{\numberline {12.14}Definicio: Accio per conjugacio en els subgrups}{11}{subsection.12.14}
 \contentsline {subsection}{\numberline {12.15}Teorema de Cauchy}{11}{subsection.12.15}
 \contentsline {subsubsection}{\numberline {12.15.1}{\bfseries \sffamily TODO} Demo}{11}{subsubsection.12.15.1}
 \contentsline {section}{\numberline {13}Subgrups de Sylow}{11}{section.13}
 \contentsline {subsection}{\numberline {13.1}Definicio: p-grups: Subgrups de Sylow}{11}{subsection.13.1}
 \contentsline {subsection}{\numberline {13.2}Teorema:}{11}{subsection.13.2}
-\contentsline {subsubsection}{\numberline {13.2.1}{\bfseries \sffamily TODO} demo}{11}{subsubsection.13.2.1}
-\contentsline {section}{\numberline {14}Teoremas de Sylow}{11}{section.14}
-\contentsline {subsection}{\numberline {14.1}Teorema: Primer Teorema de Sylow}{11}{subsection.14.1}
-\contentsline {subsection}{\numberline {14.2}Definicio}{11}{subsection.14.2}
-\contentsline {subsubsection}{\numberline {14.2.1}Observacio:}{11}{subsubsection.14.2.1}
+\contentsline {subsubsection}{\numberline {13.2.1}{\bfseries \sffamily TODO} demo}{12}{subsubsection.13.2.1}
+\contentsline {section}{\numberline {14}Teoremas de Sylow}{12}{section.14}
+\contentsline {subsection}{\numberline {14.1}Teorema: Primer Teorema de Sylow}{12}{subsection.14.1}
+\contentsline {subsection}{\numberline {14.2}Definicio}{12}{subsection.14.2}
+\contentsline {subsubsection}{\numberline {14.2.1}Observacio:}{12}{subsubsection.14.2.1}
 \contentsline {subsection}{\numberline {14.3}Teorema: Segon Teorema de Sylow}{12}{subsection.14.3}
 \contentsline {subsubsection}{\numberline {14.3.1}{\bfseries \sffamily TODO} Demo}{12}{subsubsection.14.3.1}

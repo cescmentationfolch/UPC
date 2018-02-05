@@ -35,13 +35,15 @@ Sigui G un grup, i H un subgrup de G, llavors el normalitzador de H en G es N_{G
 
 *** Observacio:
     1. El nombre de classes laterals per l'esquerra es el mateix que el nombre de classes laterals per la dreta.
-    2. L'índex és multiplicatiu. K \subset H \subset G. Llavors [G:K] = [G:H] * [H:K]
+    2. L'índex és multiplicatiu. \( K \subset H \subset G \). Llavors \( [G:K] = [G:H] * [H:K] \)
 
 ** Teorema de Lagrange
    Sigui G un grup i H un subgrup, G finit. \\
    Aleshores $|G| = |G/H| * |H| \iff |G/H| = \frac{|G|}{|H|}$, i a més |H| divideix |G|.
 
-*** TODO Demo
+*** Demo
+    Tenim G = \( \bigsqcup_{i=1}^{r} x_{i} \) Unio disjunta de classes laterals. Com \(  \rvert  x_{i}H_{i}  \lvert =  \rvert  H  \lvert \) Tenim que: \\
+\(  \lvert G  \rvert = \sum_{i=1}^{r}  \lvert H  \rvert \iff  \lvert \sfrac{G}{H} \rvert = \frac{\lvert G \rvert}{\lvert H \rvert} \), i a mes \( \lvert H \rvert\) es divisor de  \( \lvert G \rvert \)  
 
 * Subgrup normal, Grup quocient
 ** Definicio: Subgrup Normal
@@ -51,6 +53,7 @@ Sigui G un grup, i H un subgrup de G, llavors el normalitzador de H en G es N_{G
    1. Si $H_1 \vartriangleleft G1 \implies f(H_1) \vartriangleleft f(G_1)$.
    2. Si $H_2 \vartriangleleft G2 \implies f^{-1}(H_2) \vartriangleleft G_1$.
 *** TODO Demo
+
 ** Observacio
    $H \subseteq K \subseteq G$, H,K subgrups de G. Aleshores. \\
    Si $H \vartriangleleft G \implies H \vartriangleleft K$. El reciproc es fals.
@@ -68,16 +71,29 @@ aH &\times bH &\mapsto&  (ab)H &
 
 * Primer teorema d'isomorfisme
 
-** TODO Teorema:
+** Teorema:
     Sigui $f: G_1 \to G_2$ morfisme de grups, Sigui $H \vartriangleleft G_1$, i sigui l'aplicació
 
 \begin{alignat*}{2}
 \tilde{f}: G_1/H &\to G_2 \\
 aH &\mapsto \tilde{f}(aH) := f(a)
 \end{alignat*}
+Aleshores\\
+1. \( \tilde{f}\text{ ben definida }\iff H \subseteq Ker(f) \)
+Si esta ben definida:
+n2. \( \tilde{f} \) es morfisme de grups
+3. \( \tilde{f} \) injectiva \( \iff\) H = Ker(f)
+4. \( Im( \tilde{f} ) = Im(f) \)
+
+En particular, \( \sfrac{G_1}{Ker(f)} \cong Im(f) \)
 #+CAPTION: Primer teorema d'isomorfisme
-#+NAME: fig:Hello
+#+NAME: fig:Primer teorema d'isomorfisme
 [[./images/primeriso.jpg]]
+
+*** TODO demo
+
+*** Col\(\cdot\)lorari
+Tots els grups ciclics d'ordre n son isomorfs a \( \sfrac{\mathbb{Z}}{n\mathbb{Z}} \)
 
 * El grup multiplicatiu d'un cos finit
 
