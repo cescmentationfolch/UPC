@@ -1,4 +1,7 @@
-*.tex
 *.aux
 *.log
 *.pdf
+!**/Examens/*.pdf
+!**/PDF/*.pdf
+!**/*Teoria*.pdf
+!**/*Problemes*.pdf

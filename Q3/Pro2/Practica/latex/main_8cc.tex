@@ -1,0 +1,95 @@
+\hypertarget{main_8cc}{}\section{Referencia del Archivo main.\+cc}
+\label{main_8cc}\index{main.\+cc@{main.\+cc}}
+
+
+Programa principal para la practica {\itshape Calculadora d’expressions aritmetiques}.  
+
+
+Dependencia gráfica adjunta para main.\+cc\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{main_8cc__incl}
+\end{center}
+\end{figure}
+\subsection*{Funciones}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classresultat}{resultat} \hyperlink{main_8cc_a8618a4d38a75efdcc6be493e3b42907f}{avaluar} (list$<$ string $>$ \&op, list$<$ string $>$\+::iterator \&it)
+\begin{DoxyCompactList}\small\item\em Avalua una expressió \end{DoxyCompactList}\item 
+int \hyperlink{main_8cc_ae66f6b31b5ad750f1fe042a706a4e3d4}{main} ()
+\begin{DoxyCompactList}\small\item\em Programa principial de la pràctica. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Descripción detallada}
+Programa principal para la practica {\itshape Calculadora d’expressions aritmetiques}. 
+
+
+
+\subsection{Documentación de las funciones}
+\hypertarget{main_8cc_a8618a4d38a75efdcc6be493e3b42907f}{}\label{main_8cc_a8618a4d38a75efdcc6be493e3b42907f} 
+\index{main.\+cc@{main.\+cc}!avaluar@{avaluar}}
+\index{avaluar@{avaluar}!main.\+cc@{main.\+cc}}
+\subsubsection{\texorpdfstring{avaluar()}{avaluar()}}
+{\footnotesize\ttfamily \hyperlink{classresultat}{resultat} avaluar (\begin{DoxyParamCaption}\item[{list$<$ string $>$ \&}]{op,  }\item[{list$<$ string $>$\+::iterator \&}]{it }\end{DoxyParamCaption})}
+
+
+
+Avalua una expressió 
+
+\begin{DoxyPrecond}{Precondición}
+it = IT 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondición}
+Retorna el resultat que representa l’expressió que comença a IT. 
+\end{DoxyPostcond}
+\hypertarget{main_8cc_ae66f6b31b5ad750f1fe042a706a4e3d4}{}\label{main_8cc_ae66f6b31b5ad750f1fe042a706a4e3d4} 
+\index{main.\+cc@{main.\+cc}!main@{main}}
+\index{main@{main}!main.\+cc@{main.\+cc}}
+\subsubsection{\texorpdfstring{main()}{main()}}
+{\footnotesize\ttfamily int main (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Programa principial de la pràctica. 
+
+\begin{DoxyPrecond}{Precondición}
+L’entrada és tal i com s’indica a l’enunciat. 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondición}
+Al canal estàndard de sortida hi ha resoltes les diferents operacions i definicions. 
+\end{DoxyPostcond}
+
+
+Definición en la línea 35 del archivo main.\+cc.
+
+
+\begin{DoxyCode}
+35           \{
+36     \hyperlink{classoperacio}{operacio} o;
+37     \hyperlink{classvariable}{variable} v;
+38     \textcolor{keywordflow}{while}(\textcolor{keyword}{true})\{
+39         \hyperlink{classresultat__lectura}{resultat\_lectura} rl;
+40         \textcolor{keywordflow}{if}(rl.\hyperlink{classresultat__lectura_a178d0aae65fbce754ec5d99a04732bf0}{fi\_entrada}()) \textcolor{keywordflow}{return} 0;
+41         list<string> l = rl.\hyperlink{classresultat__lectura_a2b6b1c0d200ea75619f7ad50600551c6}{entrada}();
+42         \textcolor{keywordflow}{if}(rl.\hyperlink{classresultat__lectura_a4c84ef4ddea623e7a680c639c084d11d}{es\_def\_var}())\{
+43             \hyperlink{classresultat}{resultat} r;
+44             list<string>::iterator it = l.begin();
+45             \textcolor{keywordtype}{string} nom = *it;
+46             ++it;
+47             r = \hyperlink{main_8cc_a8618a4d38a75efdcc6be493e3b42907f}{avaluar}(l,it);
+48             v.\hyperlink{classvariable_ac8e2c3022d51e243b4c336c023300d28}{guardar\_variable}(nom ,r);
+49         \}
+50         \textcolor{keywordflow}{else} \textcolor{keywordflow}{if}(rl.\hyperlink{classresultat__lectura_ac1f77e1379c99557c3bfdf2d627594f0}{es\_def\_op}())\{
+51             o.\hyperlink{classoperacio_aa1f42a80cc416ff33caea9898fe3c9b9}{guardar\_operacio}(l);
+52         \}
+53         \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (rl.\hyperlink{classresultat__lectura_a0e73a239ad6dd63b591105a5553bef6f}{es\_expressio}())\{
+54             list<string>::iterator it = l.begin();
+55             \hyperlink{classresultat}{resultat} r = \hyperlink{main_8cc_a8618a4d38a75efdcc6be493e3b42907f}{avaluar}(l, it);
+56             r.\hyperlink{classresultat_adaa9aa55a0a9891a24f7dc04c4c1ebf2}{print}();
+57         \}
+58 
+59     \}
+60 
+61 \}
+\end{DoxyCode}
