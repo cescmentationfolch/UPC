@@ -60,8 +60,9 @@ ylabel('log10(Error absolut)');
 
 
 figure(4)
-[V, E, P] = SimpsonAdaptat(f, 0, 2, 1e-3);
+[V, P] = SimpsonAdaptat(f, 0, 2, (1e-3)/2);
 plot(P, f(P), 'b*-',P, zeros(length(P),1), '.')
+length(P)
 grid minor;
 leg = legend('Quadratura de Simpson Adaptada');
 leg.FontSize = 15;
@@ -69,7 +70,8 @@ xlabel('x');
 ylabel('sin(exp(2x))');
 
 figure(5)
-[V, E, P] = SimpsonAdaptat(f, 0, 2, 1e-6);
+[V, P] = SimpsonAdaptat(f, 0, 2, (1e-6)/2);
+length(P)
 plot(P, f(P), 'b*-', P, zeros(length(P),1), '.')
 grid minor;
 leg = legend('Quadratura de Simpson Adaptada');
