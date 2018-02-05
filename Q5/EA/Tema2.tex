@@ -1,0 +1,136 @@
+% Created 2017-12-14 jue 16:09
+% Intended LaTeX compiler: pdflatex
+\documentclass[11pt]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{graphicx}
+\usepackage{grffile}
+\usepackage{longtable}
+\usepackage{wrapfig}
+\usepackage{rotating}
+\usepackage[normalem]{ulem}
+\usepackage{amsmath}
+\usepackage{textcomp}
+\usepackage{amssymb}
+\usepackage{capt-of}
+\usepackage{hyperref}
+\usepackage[margin=3cm]{geometry}
+\usepackage{xfrac}
+\author{Dean}
+\date{\today}
+\title{Estructures Algebraiques: Tema 2}
+\hypersetup{
+ pdfauthor={Dean},
+ pdftitle={Estructures Algebraiques: Tema 2},
+ pdfkeywords={},
+ pdfsubject={},
+ pdfcreator={Emacs 25.3.1 (Org mode 9.1.3)},
+ pdflang={English}}
+\begin{document}
+
+\maketitle
+\setcounter{tocdepth}{4}
+\tableofcontents
+
+
+\section{Anell}
+\label{sec:orgd27d9dd}
+
+\subsection{Definicio Anell}
+\label{sec:orgc222efc}
+Un \textbf{anell} es un conjunt A amb dues operacions internes, la suma (+) i el producte (\(\cdot\)), tals que: \\
+\begin{enumerate}
+\item (A, +) es grup abelia
+\item (A, \(\cdot\)) verifica la propietat associativa.
+\item Propietat distributiva del producte respecte la suma.
+\end{enumerate}
+L'anell es commutatiu si \(ab = ba \quad \forall a,b \in A\) \\
+L'anell es unitari si existeix neutre pel producte.
+
+\subsection{Propietats:}
+\label{sec:orgb4af416}
+\begin{enumerate}
+\item a \(\cdot\) 0 = 0
+\item 1 = 0 \(\iff\) A = 0
+\item (-1) \(\cdot\) x = -x
+\item Suposem (A,+, \(\cdot\)) anell commutatiu amb unitat aleshores la suma es commutativa. (S'imposa a la definicio per si l'anell no es unitari)
+\end{enumerate}
+
+
+\subsection{Definicio A\(^{\text{*}}\)}
+\label{sec:orga1a6fab}
+\(A^{*} = \{ a \in A \mid \exists b \in A \text{ tal que } ab = 1 \}\), elements invertibles de A. \\
+Llavors A\(^{\text{*}}\) es el grup multiplicatiu i es un grup abelia.
+
+\subsection{Definicio Cos}
+\label{sec:orgc69b7c1}
+Un \textbf{cos} es un anell A commutatiu amb unitat tal que A\(^{\text{*}}\) = A $\backslash$ \{0\}.
+
+\subsection{Definicio Subanell}
+\label{sec:org3f2850f}
+Un \textbf{Subanell} de A es un subconjunt B \(\subseteq\) A tal que amb la suma, el producte i el deutre de A 1\(_{\text{A}}\), es un anell.
+
+\section{Ideals}
+\label{sec:orgd8a8e65}
+
+\subsection{Definicio ideals}
+\label{sec:orgc07226a}
+Sigui A un anell commutatiu amb unitat. Un \textbf{ideal de A} es un subconjunt I de A tal que cumpleix:
+\begin{enumerate}
+\item 0 \(\in\) I
+\item \(\forall x, y \in I, \quad x + y \in I\)
+\item \(\forall x \in I, \forall a \in A, ax \in I\)
+\end{enumerate}
+
+
+\subsubsection{Observacio}
+\label{sec:org0ee89db}
+La condicio 1 equival a que I \(\neq \varnothing\).
+
+\subsubsection{Ideal impropi}
+\label{sec:org09a4233}
+Direm que un Ideal I es impropi si\(I = \varnothing\).
+
+\subsubsection{Ideal principal}
+\label{sec:org3e3c72a}
+Sigui A anell i x \(\in\) A. El conjunt de multiples de x = \(\{ ax \mid a \in A \}\) es un ideal de A. Se l'anomena \textbf{ideal principal}
+
+\begin{enumerate}
+\item Observacio
+\label{sec:orgb5e4624}
+Tot ideal de \(\mathcal{Z}\) es principal.
+\end{enumerate}
+
+\subsubsection{Proposicio}
+\label{sec:org5ccdd46}
+\(I = A \iff 1 \in I \iff I \cap A^* \neq \varnothing\).
+
+\subsubsection{Proposicio}
+\label{sec:orgd84559d}
+Sigui A anell commutatiu amb unitat. Aleshores, A es cos \(\iff \{\text{ideals de A}\} = \{0,A\}\)
+
+\subsection{Operacions amb ideals}
+\label{sec:org95d1c92}
+
+\subsubsection{Interseccio}
+\label{sec:orgb9ecdde}
+Sigui A anell, I, J ideals de A.
+La interseccio de I i J es I \(\cap\) J = \(\{ x \in A \mid x \in I, x \in J\}\) \\
+Si I, J son ideals de A \(\implies\) I \(\cap\) J es ideal de A.
+
+\subsubsection{Unio}
+\label{sec:org9bff67d}
+Sigui A anell, I, J ideals de A.
+La unio de I i J es I \(\cup\) J = \(\{ x \in A \mid x \in I \text{ o } x \in J\}\) \\
+En general l'unio de ideals no es ideal.
+
+\subsubsection{Suma}
+\label{sec:org7031c6f}
+Sigui A anell, I, J ideals de A.
+La suma de I i J es I + J = \(\{ x + y \mid x \in I, y \in J\}\) \\
+Si I, J son ideals de A \(\implies\) I + J es ideal de A. $\backslash$\ A mes a mes es el menor ideal que conte \(I \cup J\).
+
+\subsubsection{Generador}
+\label{sec:org92bda1f}
+Sigui A un anell, x\(_{\text{1}}\), \dots{}, x\(_{\text{r}}\) \(\in\) A. Aleshores <x1,\dots{},x\(_{\text{r}}\)> = \(\{ a_{1}x_{1} + \dots + a_{r}x_{r} \mid a_i \in A \}\) es el menor ideal de A que conte  x\(_{\text{1}}\), \dots{}, x\(_{\text{r}}\)
+\end{document}
