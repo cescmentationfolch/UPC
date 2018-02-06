@@ -1,0 +1,18 @@
+#+LATEX_HEADER: \usepackage[margin=3cm]{geometry}
+#+LATEX_HEADER: \usepackage{xfrac}
+#+TITLE: General Motion
+#+OPTIONS: toc:nil
+* Examen Quimica
+** [3pt] 1
+Tenemos una disolución de ácido clorhídrico a 0.5 M. Para unos experimentos necesitaremos esta disolución en distintas concentraciones. Cuantos mililitros de esta disolución necesitaremos para:
+1. Tener una mezcla de 100ml a 0.2 M
+2. Tener una mezcla de 150ml a 0.1 M
+3. Tener una mezcla de 200ml a 1M
+
+** [2pt] 2
+%en masa => molaridad
+
+** [2pt] 3
+Tenemos una sustancia S de una molaridad desconocida, pero sabemos que con 50ml de esta sustancia y enrasando con agua hasta los 200ml obtenemos la misma disolución a 0.5M. Cual es la molaridad de la sustancia inicial?
+
+** [3pt] 4
