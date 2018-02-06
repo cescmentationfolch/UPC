@@ -1,0 +1,27 @@
+#+LATEX_HEADER: \usepackage[margin=3cm]{geometry}
+#+LATEX_HEADER: \usepackage{xfrac}
+#+TITLE: Anàlisi real: T1-Successions i sèries funcionals
+#+OPTIONS: toc:4
+
+
+* Successions i sèries funcionals
+
+** Successions i sèries de funcions
+
+*** Definició: Funció limit
+
+** Convergència uniforme
+*** Definició - Convergència uniforme
+*** Proposició - Criteri de Cauchy: 
+    \( \iff \) Convergent uniforme
+** Convergència uniforme i continuïtat 
+*** Teorema: Condició suficient de continuïtat
+    \( (f_{n}) \) successió de funcions contínues que convergeix uniformement vers f en A \( \implies f \in \mathcal{C}(A) \)
+**** No es confició necessaria 
+\\
+Si prenem \(f_{n} = x^{n}, A = (0, 1) \)
+*** Lema - Lema de Dini: Condició suficient de convergència uniforme
+    \( (f_{n}) \text{ contínua i monòtona, convergeix puntualment en A compacte sobre } f \text{ contínua} \implies (f_{n}) \text{ convergent uniforme} \)
+** Convergència uniforme i integració
+*** Teorema: Condició suficient de integrable Riemman
+    \( (f_{n}) \) successió de funcions integrables de Riemann a [a,b] i convergeix uniformement vers f en A \( \implies f \in \mathcal{R}[a,b] \)
