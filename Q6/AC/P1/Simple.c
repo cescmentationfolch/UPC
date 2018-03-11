@@ -2,7 +2,6 @@
 
 main()
 {
-  
   long long i, resultado=0;
   float t1,t2;
   t1 = GetTime();
