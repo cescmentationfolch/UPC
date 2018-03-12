@@ -6,4 +6,4 @@
 !**/PDF/*.pdf
 !**/*Teoria*.pdf
 !**/*Problemes*.pdf
-!**/Clases/*.pdf
+!**/Clases/**/*.pdf
