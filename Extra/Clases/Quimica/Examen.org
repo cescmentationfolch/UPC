@@ -17,6 +17,10 @@ Tenemos una disolución de ácido clorhídrico a 0.8 M. Para unos experimentos e
 Y justificar el procedimiento.
 
 * [2pt]
+Sabemos el magnesio reacciona con el nitrogeno.
+\[ M_{s} + N_{2(g)} \rightarrow Mg_{3}N_{(s)} \]
++ Iguala la ecuación
++ Cuantos gramos de nitruro de magnesio se formará si reaccionan 3,25g de magnesio
 
 * [0.5pt]
 Cuál es la condición para que la molalidad y la molaridad tengan el mismo valor en las unidades del sistema internacional?
