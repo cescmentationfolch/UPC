@@ -72,10 +72,6 @@ ylabel('sin(exp(2x))');
 
 figure(5)
 [V, P] = SimpsonAdaptat(f, 0, 2, (1e-6)/2);
-<<<<<<< HEAD
-length(P)
-=======
->>>>>>> 2be7514637f12ec760f501e4f20932b85ca30e50
 plot(P, f(P), 'b*-', P, zeros(length(P),1), '.')
 grid minor;
 leg = legend('Quadratura de Simpson Adaptada');
