@@ -2,9 +2,12 @@
 *.log
 *.pdf
 *.out
-!**/Examens/*.pdf
-!**/PDF/*.pdf
+!**/Examens/**/*.pdf
+!**/PDF/**/*.pdf
 !**/*Teoria*.pdf
 !**/*Problemes*.pdf
 !**/Clases/**/*.pdf
-!**/Practica/*.pdf
+!**/Practica/**/*.pdf
+!**/Problemes/**/*.pdf
+!**/Teoria/**/*.pdf
+!**/*_vFinal.pdf
