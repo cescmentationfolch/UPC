@@ -1,0 +1,46 @@
+* Deliverable 3
+
+** Introduction
+The aim of these deliverable is to describe the perfect parallelism found when computing mostly independent data. In our case the object to be studied is the mandelbrot set.
+
+The mandelbrot set is formed by those complex numbers \emph{c} which do not diverge under the recurrence relationship: \[ z_0 = 0, z_{n+1}=(z_n)^{2} + c \]
+It can be immediately seen that the verification whether each point belongs to our set is independent to each other as it only depends on the complex number chosen.
+
+Points which belong to the set after k iterations are colored in white, other regions are colored according to the number of iterations before exiting the bounded region.
+
+** Row/Point Granularity
+
+*** Row Granularity
+    Firstly we can see that both task dependency graph contain 8 different sized tasks. The reason for the discrepancy is size is caused by the way we compute which points belong to the mandelbrot set. As we run a while loop when a point is still in the convergence radius it makes the rows which contain more points belonging to the mandelbrot set run more iterations. As we are dividing it by rows it is logical that thos closer to the origin have more points in the set and hence run more iterations to compute the points that belong to the set.
+    The main difference we observe if the way the dependency edges are created. The graphical version of the program creates a sequential task dependency graph whereas the other version creates tasks which are totally independent from each other. After checking the code we can conclude that main culprit are these two lines:
+#+BEGIN_SRC c++
+                XSetForeground (display, gc, color);
+                XDrawPoint (display, win, gc, col, row);
+#+END_SRC
+It appears that the way it renders the final image is pixel by pixel in left to right and top to bottom order and hence it makes all pixel computations dependant on all previous tasks. If we comment out any one of those out both lines we can see that it behaves just as the non-graphic version, and if we only comment out one of them nothing changes.
+=Image place holder for row tareador=
+*** Point Granularity
+    Just as the row granularity we observe the same patterns when using point granularity. The observation on parallelism and secuential execution still stands and moreover we get a further proof that points which seem to belong to the mandelbrot set take more iterations. Those are the tasks which take longer time.
+=Image of point tareador=
+
+*** Parallelization strategy for Mandeld
+    To avoid the sequential execution we want to be able to parallelize the process of drawing on the display. If weuse tareador to check the task dependency we can observe that the global variable causing this problem is \emph{X11\_COLOR\_fake} which is used by both lines of code above. Hence we have to come up with a strategy so this variable can be used by all threads at once. Hence one possible strategy is to create a critical region so there is no datasharing problem. If we use =tareador_disable_object(&X11_COLOR_fake);= and create the corresponding dependency graph with tareador we can see it is now parallel.
+
+** OpenMP Parallelization
+
+We are now going to try and parallelize the program with the above observations. There are various ways we can try to make the program parallel.
+
+*** Task
+First we are going to use the =task= directive to parallelize the program. 
+=Image place holder of point and row=
+
+We can see that the row based granularity has a strong parallelism, as the speedup grows linearly with the increase of threads. This seems to line up with the hypothesis that the Mandelbrot Set computation is perfectly parallelizable. However we do see an unexpected result when using the point granularity. It seems that due to the number of tasks created, the synchronization overhead is too large for it to be worth parallelizing.
+
+*** Taskloop
+=Image=
+
+*** For
+=Image=
+
+
+
