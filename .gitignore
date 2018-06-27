@@ -13,3 +13,5 @@
 !**/Teoria/**/s*.pdf
 !**/*_vFinal.pdf
 !*/**/*_sync.pdf
+*/**/*_nosync.*
+*/**/*_nosync/**/*
