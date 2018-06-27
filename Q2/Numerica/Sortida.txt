@@ -1,0 +1,58 @@
+Estas son las normas de la matriz
+la norma sub1 de la matriz A es: 8.370066e+01
+la norma subinf de la matriz A es: 7.649065e+01
+
+
+
+Estas son las normas del vector x: 
+la norma sub1 es: 5.749821e+01
+la norma sub2 es: 1.891437e+01
+la norma subinf es: 1.135920e+01
+
+Aquí estan los determinantes y trazas: 
+El determinante de A es: -6.672436e+13
+la traza de A es: -1.567710e+01
+-----------------------------------------------
+Matriz Inversa
+Estas son las normas de la matriz inversa
+la norma sub1 de la matriz A-1 es: 4.572827e+00
+la norma subinf de la matriz A-1 es: 6.368123e+00
+
+la traza de la matriz A-1 es: -5.844778e-01
+el nombre de condicio sub 1 es: 3.827487e+02
+el nombre de condicio sub infinit es: 4.871019e+02
+
+------------------------------------------------
+
+la solucio del sistema es:
+el valor x0 es: -1.135920e+01
+el valor x1 es: -8.151192e-01
+el valor x2 es: -5.970397e-01
+el valor x3 es: 4.724778e+00
+el valor x4 es: 5.153889e+00
+el valor x5 es: 3.731054e+00
+el valor x6 es: -8.579466e+00
+el valor x7 es: 8.479148e-01
+el valor x8 es: -3.807218e+00
+el valor x9 es: -3.440234e+00
+el valor x10 es: -5.294628e+00
+el valor x11 es: -1.742809e+00
+el valor x12 es: 2.006622e+00
+el valor x13 es: -5.398242e+00
+
+el vector de permutacion es (indexada a 0): 8 4 3 5 6 1 11 2 10 9 12 7 0 13 
+La matriz de permutacion correspondiente es: 
+0 0 0 0 0 0 0 0 1 0 0 0 0 0 
+0 0 0 0 1 0 0 0 0 0 0 0 0 0 
+0 0 0 1 0 0 0 0 0 0 0 0 0 0 
+0 0 0 0 0 1 0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 1 0 0 0 0 0 0 0 
+0 1 0 0 0 0 0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 0 1 0 0 
+0 0 1 0 0 0 0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 1 0 0 0 
+0 0 0 0 0 0 0 0 0 1 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 0 0 1 0 
+0 0 0 0 0 0 0 1 0 0 0 0 0 0 
+1 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 0 0 0 1 
