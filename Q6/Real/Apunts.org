@@ -1,0 +1,26 @@
+
+* Tema 1
+El objetivo de este tema es describir el comportamiento de las suceciones de funciones a su función límite.
+Vemos que \(f_n \text{ convergente uniforme + continua} \implies f \text{ continua}\) debido a que podemos fitar la distancia de dos puntos mediante la definicion de limite y conv unirforme.
+El recíproco no es cierto, pero por el lema de Dini, si \(f_n\) \(f\) continuas y \(f_n\) puntualmente monótona, entonces la convergencia es uniforme
+
+\(f_n \text{ convergente unirforme + Riemann} \implies f \text{ Riemman}\)
+
+* Tema 2
+Ahora, en vez de considerar sucesiones de funciones con un límite consideramos a las familias y queremos definir propiedades útiles para poderla aproximar con un conjunto numerable.
+Lo primero que definiremos es el espacio de funciones contínuas, \(C(A,\mathbb{R})\) Para trabajar con más facilidad sobre la norma del supremo que la dotaremos, consideraremos el espacio de funciones continuas en un compacto \(C(K,\mathbb{R})\)
+
+Con la norma del supremo inducimos en este espacio una métrica, además este espacio es completo (es decir, contiene el limite de cualquier sucesion de Cauchy). Por tanto es un espacio de Banach, y además es un álgebra de Banach. (la norma de la identidad es uno, cumple desigualdad triangular para el producto).
+
+Sobre famílias de este espacio consideraremos las siguientes propiedades:
+1. Puntualmente acotado - para toda función de la familia evaluada en un punto existe una cota.
+2. Uniformemente acotado - Toda función de la familia esta acotada por un valor.
+Claramente 2 implica 1
+
+Vemos que si \((f_n)\) es una sucesión de funciones continuas uniformemente convergentes, entonces la familia de estas funciones son uniformemente acotadas.
+
+Definiremos la *Equicontinuidad* si para toda funcion de F, y todo \(\epsilon\) > 0. existe \(\delta_\epsilon > 0 \) tal que si dos puntos estan a distancia menor que  \(\delta_\epsilon\) entonces la imagen esta a distancia menor a  \(\epsilon\). Notese que la \(\delta\) no depende ni del punto (continuidad), ni de la función. 
+
+Vemos que si \((f_n)\) es una sucesión de funciones continuas uniformemente convergentes, entonces la familia de estas funciones son uniformemente acotadas y *Equicontinua*.
+
+Lo siguiente que queremos ver si el recíproco es cierto.

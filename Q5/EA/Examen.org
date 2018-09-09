@@ -1,0 +1,27 @@
+* Groups
+** Quocient group
+*** Propositions
+    1. \( G/Z \) cyclic \(\implies\) G abelian
+** Commutator of the group
+*** Def
+    \( [x,y] = x^{-1}y^{-1}xy \)
+    \( G' = \{ [x,y] | x,y \in G \} \) 
+*** Propositions
+    1. \( H \subset G \) subgroup then:
+       1. \( H \vartriangleleft G \iff [H,G] \subset H  \)
+       2. \( G/G' \) is the largest abelian quocient
+         
+    2. \( |G| = p^3 \text{not abelian} \implies G' = Z(G) \)
+
+** Actions
+*** Definititions
+    1. Centralizer \( \{ g \in G | gag^{-1} = a \quad \forall a \in A \} \)
+    2. Center is the centraliser of the group.
+    3. Normalizer: \( \{ g \in G | gAg^{-1} = A \} \)
+    4. Stabilizer: \( \{ g \in G | g \cdot s = s \} \)
+    
+*** Propositions
+    1. Conjugate of Normalizer is Normalizer of conjugate.
+    2. Conjugate of Center is Center of conjugate.
+    3. Number of Conjugates of S is index \([G : N_G(S)]\)
+

@@ -2,6 +2,7 @@
 *.log
 *.pdf
 *.out
+**/ltximg/*
 .#*
 !**/Examens/**/*.pdf
 !**/PDF/**/*.pdf
