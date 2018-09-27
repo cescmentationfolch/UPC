@@ -7,5 +7,7 @@ Per tant:
 \[ l(p) = ln(\mathcal{L}(p)) = \sum_{i=1}^{n} ln(p^{x_{i}}(1-p)^{1 - x_{i}}) \]
 
 Llavors ter trobar el estimador de màxima versemblança voldrem trobar un màxim de \(\mathcal{L}(p)\), 
-i per tant, un màxim de la Log-versemblança. Considerem la seva derivada:
-\[ \frac{dl}{dp} = \sum_{i=1}^{n} \frac{x_{i}p^{x_{i}-1}(1-p)^{1-x_{i}} - (p^{x_{i}}(1-x_{i})(1-p)^{-x_{i}})}{\sum_{i=1}^{n} p^{x_{i}}(1-p)^{1 - x_{i}}}\]
+i per tant, un màxim de la Log-versemblança. Considerem la seva derivada i la igualem a 0:
+\[ \frac{dl}{dp} = 0 = \sum_{i=1}^{n} \frac{x_{i}p^{x_{i}-1}(1-p)^{1-x_{i}} - (p^{x_{i}}(1-x_{i})(1-p)^{-x_{i}})}{p^{x_{i}}(1-p)^{1 - x_{i}}}\]
+Si separem la suma obtenim:
+\[\sum_{i=1}^{n} \frac{x_{i}p^{x_{i}-1}(1-p)^{1-x_{i}}}{p^{x_{i}}(1-p)^{1 - x_{i}}} = \sum_{i}^{n} \frac{(p^{x_{i}}(1-x_{i})(1-p)^{-x_{i}})}{p^{x_{i}}(1-p)^{1 - x_{i}}}\]
