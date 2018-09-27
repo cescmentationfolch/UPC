@@ -1,0 +1,11 @@
+* Problema 6
+
+Definim la funció de versemblança com: 
+\[ \mathcal{L}(p) = p^{x_{i}}(1-p)^{1 - x_{i}} \]
+Ens fixem que si \(x_i = 1\) llavors \( P(x_{i} | p) = p \) i sino \( P(x_{i} | p) = 1 - p \)  
+Per tant: 
+\[ l(p) = ln(\mathcal{L}(p)) = \sum_{i=1}^{n} ln(p^{x_{i}}(1-p)^{1 - x_{i}}) \]
+
+Llavors ter trobar el estimador de màxima versemblança voldrem trobar un màxim de \(\mathcal{L}(p)\), 
+i per tant, un màxim de la Log-versemblança. Considerem la seva derivada:
+\[ \frac{dl}{dp} = \sum_{i=1}^{n} \frac{x_{i}p^{x_{i}-1}(1-p)^{1-x_{i}} - (p^{x_{i}}(1-x_{i})(1-p)^{-x_{i}})}{\sum_{i=1}^{n} p^{x_{i}}(1-p)^{1 - x_{i}}}\]
